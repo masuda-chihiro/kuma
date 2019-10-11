@@ -1,0 +1,2174 @@
+ailsを学ぼう
+第4版 目次
+推薦の言葉
+謝辞
+著者
+著作権とライセンス
+第1章ゼロからデプロイまで
+1.1 はじめに
+1.1.1 前提知識
+1.1.2 この本における取り決め
+1.2 さっそく動かす
+1.2.1 開発環境
+1.2.2 Railsをインストールする
+1.3 最初のアプリケーション
+1.3.1 Bundler
+1.3.2 rails server
+1.3.3 Model-View-Controller (MVC)
+1.3.4 Hello, world!
+1.4 Gitによるバージョン管理
+1.4.1 インストールとセットアップ
+1.4.2 Gitのメリット
+1.4.3 Bitbucket
+1.4.4 ブランチ、編集、コミット、マージ
+1.5 デプロイする
+1.5.1 Herokuのセットアップ
+1.5.2 Herokuにデプロイする (1)
+1.5.3 Herokuにデプロイする (2)
+1.5.4 Herokuコマンド
+1.6 最後に
+1.6.1 本章のまとめ
+第2章Toyアプリケーション
+2.1 アプリケーションの計画
+2.1.1 ユーザーのモデル設計
+2.1.2 マイクロポストのモデル設計
+2.2 Usersリソース
+2.2.1 ユーザーページを探検する
+2.2.2 MVCの挙動
+2.2.3 Usersリソースの欠点
+2.3 Micropostsリソース
+2.3.1 マイクロポストを探検する
+2.3.2 マイクロポストをマイクロにする
+2.3.3 ユーザーはたくさんマイクロポストを持っている
+2.3.4 継承の階層
+2.3.5 アプリケーションをデプロイする
+2.4 最後に
+2.4.1 本章のまとめ
+第3章ほぼ静的なページの作成
+3.1 セットアップ
+3.2 静的ページ
+3.2.1 静的なページの生成
+3.2.2 静的なページの調整
+3.3 テストから始める
+3.3.1 最初のテスト
+3.3.2 Red
+3.3.3 Green
+3.3.4 Refactor
+3.4 少しだけ動的なページ
+3.4.1 タイトルをテストする (Red)
+3.4.2 タイトルを追加する (Green)
+3.4.3 レイアウトと埋め込みRuby (Refactor)
+3.4.4 ルーティングの設定
+3.5 最後に
+3.5.1 本章のまとめ
+3.6 高度なセットアップ
+3.6.1 minitest reporters
+3.6.2 Guardによるテストの自動化
+第4章Rails風味のRuby
+4.1 動機
+4.1.1 組み込みヘルパー
+4.1.2 カスタムヘルパー
+4.2 文字列とメソッド
+4.2.1 コメント
+4.2.2 文字列
+4.2.3 オブジェクトとメッセージ受け渡し
+4.2.4 メソッドの定義
+4.2.5 titleヘルパー、再び
+4.3 他のデータ構造
+4.3.1 配列と範囲演算子
+4.3.2 ブロック
+4.3.3 ハッシュとシンボル
+4.3.4 CSS、再び
+4.4 Rubyにおけるクラス
+4.4.1 コンストラクタ
+4.4.2 クラス継承
+4.4.3 組み込みクラスの変更
+4.4.4 コントローラクラス
+4.4.5 ユーザークラス
+4.5 最後に
+4.5.1 本章のまとめ
+第5章レイアウトを作成する
+5.1 構造を追加する
+5.1.1 ナビゲーション
+5.1.2 BootstrapとカスタムCSS
+5.1.3 パーシャル (partial)
+5.2 Sassとアセットパイプライン
+5.2.1 アセットパイプライン
+5.2.2 素晴らしい構文を備えたスタイルシート
+5.3 レイアウトのリンク
+5.3.1 Contactページ
+5.3.2 RailsのルートURL
+5.3.3 名前付きルート
+5.3.4 リンクのテスト
+5.4 ユーザー登録: 最初のステップ
+5.4.1 Usersコントローラ
+5.4.2 ユーザー登録用URL
+5.5 最後に
+5.5.1 本章のまとめ
+第6章ユーザーのモデルを作成する
+6.1 Userモデル
+6.1.1 データベースの移行
+6.1.2 modelファイル
+6.1.3 ユーザーオブジェクトを作成する
+6.1.4 ユーザーオブジェクトを検索する
+6.1.5 ユーザーオブジェクトを更新する
+6.2 ユーザーを検証する
+6.2.1 有効性を検証する
+6.2.2 存在性を検証する
+6.2.3 長さを検証する
+6.2.4 フォーマットを検証する
+6.2.5 一意性を検証する
+6.3 セキュアなパスワードを追加する
+6.3.1 ハッシュ化されたパスワード
+6.3.2 ユーザーがセキュアなパスワードを持っている
+6.3.3 パスワードの最小文字数
+6.3.4 ユーザーの作成と認証
+6.4 最後に
+6.4.1 本章のまとめ
+第7章ユーザー登録
+7.1 ユーザーを表示する
+7.1.1 デバッグとRails環境
+7.1.2 Usersリソース
+7.1.3 debuggerメソッド
+7.1.4 Gravatar画像とサイドバー
+7.2 ユーザー登録フォーム
+7.2.1 form_forを使用する
+7.2.2 フォームHTML
+7.3 ユーザー登録失敗
+7.3.1 正しいフォーム
+7.3.2 Strong Parameters
+7.3.3 エラーメッセージ
+7.3.4 失敗時のテスト
+7.4 ユーザー登録成功
+7.4.1 登録フォームの完成
+7.4.2 flash
+7.4.3 実際のユーザー登録
+7.4.4 成功時のテスト
+7.5 プロのデプロイ
+7.5.1 本番環境でのSSL
+7.5.2 本番環境用のWebサーバー
+7.5.3 本番環境へのデプロイ
+7.6 最後に
+7.6.1 本章のまとめ
+第8章基本的なログイン機構
+8.1 セッション
+8.1.1 Sessionsコントローラ
+8.1.2 ログインフォーム
+8.1.3 ユーザーの検索と認証
+8.1.4 フラッシュメッセージを表示する
+8.1.5 フラッシュのテスト
+8.2 ログイン
+8.2.1 log_inメソッド
+8.2.2 現在のユーザー
+8.2.3 レイアウトリンクを変更する
+8.2.4 レイアウトの変更をテストする
+8.2.5 ユーザー登録時にログイン
+8.3 ログアウト
+8.4 最後に
+8.4.1 本章のまとめ
+第9章発展的なログイン機構
+9.1 Remember me 機能
+9.1.1 記憶トークンと暗号化
+9.1.2 ログイン状態の保持
+9.1.3 ユーザーを忘れる
+9.1.4 ２つの目立たないバグ
+9.2 [Remember me] チェックボックス
+9.3 [Remember me] のテスト
+9.3.1 [Remember me] ボックスをテストする
+9.3.2 [Remember me] をテストする
+9.4 最後に
+9.4.1 本章のまとめ
+第10章ユーザーの更新・表示・削除
+10.1 ユーザーを更新する
+10.1.1 編集フォーム
+10.1.2 編集の失敗
+10.1.3 編集失敗時のテスト
+10.1.4 TDDで編集を成功させる
+10.2 認可
+10.2.1 ユーザーにログインを要求する
+10.2.2 正しいユーザーを要求する
+10.2.3 フレンドリーフォワーディング
+10.3 すべてのユーザーを表示する
+10.3.1 ユーザーの一覧ページ
+10.3.2 サンプルのユーザー
+10.3.3 ページネーション
+10.3.4 ユーザー一覧のテスト
+10.3.5 パーシャルのリファクタリング
+10.4 ユーザーを削除する
+10.4.1 管理ユーザー
+10.4.2 destroyアクション
+10.4.3 ユーザー削除のテスト
+10.5 最後に
+10.5.1 本章のまとめ
+第11章アカウントの有効化
+11.1 AccountActivationsリソース
+11.1.1 AccountActivationsコントローラ
+11.1.2 AccountActivationのデータモデル
+11.2 アカウント有効化のメール送信
+11.2.1 送信メールのテンプレート
+11.2.2 送信メールのプレビュー
+11.2.3 送信メールのテスト
+11.2.4 ユーザーのcreateアクションを更新
+11.3 アカウントを有効化する
+11.3.1 authenticated?メソッドの抽象化
+11.3.2 editアクションで有効化
+11.3.3 有効化のテストとリファクタリング
+11.4 本番環境でのメール送信
+11.5 最後に
+11.5.1 本章のまとめ
+第12章パスワードの再設定
+12.1 PasswordResetsリソース
+12.1.1 PasswordResetsコントローラ
+12.1.2 新しいパスワードの設定
+12.1.3 createアクションでパスワード再設定
+12.2 パスワード再設定のメール送信
+12.2.1 パスワード再設定のメールとテンプレート
+12.2.2 送信メールのテスト
+12.3 パスワードを再設定する
+12.3.1 editアクションで再設定
+12.3.2 パスワードを更新する
+12.3.3 パスワードの再設定をテストする
+12.4 本番環境でのメール送信 (再掲)
+12.5 最後に
+12.5.1 本章のまとめ
+12.6 証明: 期限切れの比較
+第13章ユーザーのマイクロポスト
+13.1 Micropostモデル
+13.1.1 基本的なモデル
+13.1.2 Micropostのバリデーション
+13.1.3 User/Micropostの関連付け
+13.1.4 マイクロポストを改良する
+13.2 マイクロポストを表示する
+13.2.1 マイクロポストの描画
+13.2.2 マイクロポストのサンプル
+13.2.3 プロフィール画面のマイクロポストをテストする
+13.3 マイクロポストを操作する
+13.3.1 マイクロポストのアクセス制御
+13.3.2 マイクロポストを作成する
+13.3.3 フィードの原型
+13.3.4 マイクロポストを削除する
+13.3.5 フィード画面のマイクロポストをテストする
+13.4 マイクロポストの画像投稿
+13.4.1 基本的な画像アップロード
+13.4.2 画像の検証
+13.4.3 画像のリサイズ
+13.4.4 本番環境での画像アップロード
+13.5 最後に
+13.5.1 本章のまとめ
+第14章ユーザーをフォローする
+14.1 Relationshipモデル
+14.1.1 データモデルの問題 (および解決策)
+14.1.2 User/Relationshipの関連付け
+14.1.3 Relationshipのバリデーション
+14.1.4 フォローしているユーザー
+14.1.5 フォロワー
+14.2 [Follow] のWebインターフェイス
+14.2.1 フォローのサンプルデータ
+14.2.2 統計と [Follow] フォーム
+14.2.3 [Following] と [Followers] ページ
+14.2.4 [Follow] ボタン (基本編)
+14.2.5 [Follow] ボタン (Ajax編)
+14.2.6 フォローをテストする
+14.3 ステータスフィード
+14.3.1 動機と計画
+14.3.2 フィードを初めて実装する
+14.3.3 サブセレクト
+14.4 最後に
+14.4.1 サンプルアプリケーションの機能を拡張する
+14.4.2 読み物ガイド
+14.4.3 本章のまとめ
+14.4.4 訳者あとがき
+推薦の言葉
+私が前にいた会社 (CD Baby) は、かなり早い段階でRuby on Railsに乗り換えたのですが、またPHPに戻ってしまいました (詳細は私の名前をGoogleで検索してみてください)。そんな私ですが、Michael Hartl 氏の本を強く勧められたので、その本を使ってもう一度試してみた結果、今度は無事に Rails に乗り換えることができました。それがこの Ruby on Rails チュートリアルという本です。
+
+私は多くの Rails 関連の本を参考にしてきましたが、真の決定版と呼べるものは本書をおいて他にありません。本書では、あらゆる手順が「Rails 流」で行われています。最初のうちは慣れるまでに時間がかかりましたが、この本を終えた今、ついにこれこそが自然な方式だと感じられるまでになりました。また、本書は Rails 関連の本の中で唯一、多くのプロが推奨するテスト駆動開発 (TDD: Test Driven Development) を、全編を通して実践しています。実例を使ってここまで分かりやすく解説された本は、本書が初めてでしょう。極めつけは、Git や GitHub、Heroku の実例に含めている点です。このような、実際の開発現場で使わているツールもチュートリアルに含まれているため、読者は、まるで実際のプロジェクトの開発プロセスを体験しているかのような感覚が得られるはずです。それでいて、それぞれの実例が独立したセクションになっているのではなく、そのどれもがチュートリアルの内容と見事に一体化しています。
+
+本書は、筋道だった一本道の物語のようになっています。私自身、章の終わりにある練習問題もやりながら、この Rails チュートリアルを3日間かけて一気に読破しました1。最初から最後まで、途中を飛ばさずにやるのが一番効果的で有益な読み方です。ぜひやってみてください。
+
+それでは、楽しんでお読みください！
+
+Derek Sivers (sivers.org)
+CD Baby 創業者
+
+(訳注: たった3分のTEDの動画「社会運動をどうやって起こすか」を観たことがある方もいるのではないでしょうか。その方からの推薦の言葉です。)
+
+謝辞
+Ruby on Rails チュートリアルは、私の以前の著書「RailsSpace」と、その時の共著者 Aurelius Prochazka から多くを参考にさせてもらっています。Aure には、協力と本書への支援も含め、感謝したいと思います。また、RailsSpace と Rails チュートリアルの編集を担当した Debra Williams Cauley 氏にも謝意を表したく思います。彼女が野球の試合に連れて行ってくれる限り、私は本を書き続けるでしょう。
+
+私にインスピレーションと知識を与えてくれた Rubyist の方々にも感謝したいと思います： David Heinemeier Hansson, Yehuda Katz, Carl Lerche, Jeremy Kemper, Xavier Noria, Ryan Bates, Geoffrey Grosenbach, Peter Cooper, Matt Aimonetti, Mark Bates, Gregg Pollack, Wayne E. Seguin, Amy Hoy, Dave Chelimsky, Pat Maddox, Tom Preston-Werner, Chris Wanstrath, Chad Fowler, Josh Susser, Obie Fernandez, Ian McFarland, Steven Bristol, Pratik Naik, Sarah Mei, Sarah Allen, Wolfram Arnold, Alex Chaffee, Giles Bowkett, Evan Dorn, Long Nguyen, James Lindenbaum, Adam Wiggins, Tikhon Bernstam, Ron Evans, Wyatt Greene, Miles Forrest, Sandi Metz, Ryan Davis, Aaron Patterson, Pivotal Labs の方々、Heroku の方々、thoughtbot の方々、そして GitHub の方々、ありがとうございました。最後に、ここに書ききれないほど多くの読者からバグ報告や提案を頂きました。ご協力いただいた皆様のおかげで、本書の完成度をとことんまで高めることができました。
+
+丁寧なレビュー、技術的なフィードバック、そして役立つ提案をしてくれた Andrew Thai に感謝します。また、Learn Enough to Be Dangerous の共同創業者である Nick Merwin と Lee Donahoe、日々のチュートリアルの制作をサポートしてくれてありがとう。
+
+最後に、たくさんの読者の皆さん、そして、ここに挙げきれないほど多いコントリビューターのみんな、バグ報告や提案をしてくれてありがとう。彼ら/彼女らの多くの手助けに、最高の感謝を。
+
+著者
+マイケル・ハートル (Michael Hartl) はRuby on Rails Tutorial という、Web 開発を学ぶときによく参考にされる本の著者です。 また、Learn Enough to Be Dangerous (learnenough.com) 教育系ウェブサイトの創業者でもあります。 以前は、(今ではすっかり古くなってしまいましたが)「RailsSpace」という本の執筆および開発に携わったり、また、 一時人気を博した Ruby on Rails ベースのSNSプラットフォーム「Insoshi」の開発にも携わっていました。 2011年には、Rails コミュニティへの高い貢献が認められて、Ruby Hero Award を受賞しました。
+
+ハーバード大学卒業後、カリフォルニア工科大学で物理学博士号を取得。シリコンバレーの有名な起業プログラム Y Combinator の卒業生でもあります。
+
+著作権とライセンス
+Ruby on Rails チュートリアル: 実例を使って Rails を学ぼう Copyright © 2016 by Michael Hartl (最終更新日: 2016/10/24 23:37:56 PT)
+
+Ruby on Rails チュートリアルで掲載しているすべてのソースコードは、MIT ライセンスおよびBeerware ライセンスの元で提供されています。(訳注: MITライセンスの利用方法については @y_catch さんの記事「MITライセンスが適用されたコードを利用するには 」をご参照ください）
+
+(注: 「すべてのソースコード」とは、Railsチュートリアル内で題材としている「Railsアプリケーションのソースコード」を指します。「Railsチュートリアル」という教材は上記ライセンスで提供されていないのでご注意ください。商用でRailsチュートリアルをご利用する場合はお問い合わせページからご連絡ください。)
+
+The MIT License
+
+Copyright (c) 2016 Michael Hartl
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+THE BEERWARE LICENSE (Revision 42)
+
+Michael Hartl wrote this code. As long as you retain
+this notice you can do whatever you want with this stuff.
+If we meet some day, and you think this stuff is worth it,
+you can buy me a beer in return.
+«前の章次の章»
+3日間で読破できる人は例外です! 実際には数週間〜数ヶ月をかけて読むのが一般的です。 ↑
+第3章
+ほぼ静的なページの作成
+本章から、本格的なサンプルアプリケーションの開発を進めていきます。残りのチュートリアルでは、このアプリケーションを例題として扱って学習していくことになります。本書を通して開発するアプリケーションは、最終的にはユーザーやマイクロポスト、ログイン/ログアウトなどの認証機能を持ちますが、まずは簡単なトピックである「静的なページの作成」から始めます。非常に単純なページではありますが、静的なページを自分の手で作成することは良い経験になり、多くの示唆も得られます。私達がこれから開発するアプリケーションにとって最適なスタート地点といえるでしょう。
+
+Railsはデータベースと連携して動的なWebサイトを開発するように設計されていますが、HTMLファイルだけで構成されている静的なページを作ることもできます。実際、Railsであえて静的なページを使っておき、後からほんの少し動的なコンテンツを追加することもできます。本章では、このような静的なページの作成について学んでいきます。本章ではそれと平行して、近年のプログラミングで不可欠となっている「自動化テスト」の雰囲気を掴んでいただきます。自動化テストを作成することで、コードが正しく動いていることが裏付けられます。さらに、良いテストを書くことで、自信をもってリファクタリングを行うことができます。例えばフォームの振る舞いを変更せずに、フォーム内で使われているメソッドを書き換えたいときに有用です。
+
+3.1 セットアップ
+第2章と同様に、新しいRailsプロジェクトを作成するところから始めます。今回はsample_appという名前にします (リスト 3.1)1。
+
+リスト 3.1: サンプルアプリケーションを生成する green
+$ cd ~/environment
+$ rails _5.1.6_ new sample_app
+$ cd sample_app/
+(2.1でも説明したとおり、クラウドIDEをご利用の方は、このプロジェクトをこれまでの2つの章で作成したプロジェクトと同じワークスペースに置くことができます。このプロジェクトで特に新しいワークスペースを作成する必要はありません)。
+
+注: 本チュートリアルを全てやり遂げた時の完成版サンプルアプリケーションをBitbucketに置いておきました2。もし途中で躓いてしまったときは参考にしてみてください。
+
+次に、2.1と同じように、テキストエディタを使ってGemfileに必要なgemを書き足していきます。リスト 3.2は、リスト 1.5やリスト 2.1と基本的に同じですが、testグループ内のgemだけが少し違っています。この変更でテスト用オプションを設定していますが、少し高度なので細かな解説は3.6に回します。今はあまり気にしないで大丈夫です。5.3.4. (注: もしサンプルアプリケーションの開発で必要になるgemをすべて知りたい場合は、リスト 13.72を参照してください。これが最終的なGemfileになります)。
+
+リスト 3.2: サンプルアプリケーション用のGemfile
+source 'https://rubygems.org'
+
+gem 'rails',        '5.1.6'
+gem 'puma',         '3.9.1'
+gem 'sass-rails',   '5.0.6'
+gem 'uglifier',     '3.2.0'
+gem 'coffee-rails', '4.2.2'
+gem 'jquery-rails', '4.3.1'
+gem 'turbolinks',   '5.0.1'
+gem 'jbuilder',     '2.7.0'
+
+group :development, :test do
+  gem 'sqlite3', '1.3.13'
+  gem 'byebug',  '9.0.6', platform: :mri
+end
+
+group :development do
+  gem 'web-console',           '3.5.1'
+  gem 'listen',                '3.1.5'
+  gem 'spring',                '2.0.2'
+  gem 'spring-watcher-listen', '2.0.1'
+end
+
+group :test do
+  gem 'rails-controller-testing', '1.0.2'
+  gem 'minitest',                 '5.10.3'
+  gem 'minitest-reporters',       '1.1.14'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
+end
+
+group :production do
+  gem 'pg', '0.20.0'
+end
+
+# Windows環境ではtzinfo-dataというgemを含める必要があります
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+前の2つの章と同様にbundle installを実行して、Gemfileで指定したgemのインストールをします。ただし、--without productionオプションを使って、production環境でしか使わないgemはインストールしないようにしておきます3。
+
+$ bundle install --without production
+上のオプションを指定することで、PostgreSQL用のpg gemをdevelopment環境にインストールせず、代わりにSQLiteがdevelopment環境とtest環境で使われるようになります。Herokuでは、development環境とproduction環境とで異なるデータベースを使うことを非推奨としていますが、幸いにもこのサンプルアプリケーションでは両者の違いは生じません。また、SQLiteの方がPostgreSQLよりもローカルでのインストールや設定がずっと楽なので、今回は異なるデータベースを使うことにします4。もしGemfileで指定されているのと異なるバージョンのgem (Rails自身のgemなど) をインストールしていた場合は、bundle updateを実行してgemを更新 (update) し、gemのバージョンを合わせておくとよいでしょう。
+
+$ bundle update
+ここまで進めたら、後はGitリポジトリを初期化するだけです。
+
+$ git init
+$ git add -A
+$ git commit -m "Initialize repository"
+最初のアプリケーションのときと同様に、まずはアプリケーションのルートディレクトリにあるREADME.mdファイルを更新して、具体的な作業内容をわかりやすく記入しておくことをおすすめします (リスト 3.3)。例えば次のように、READMEにはこのアプリケーションを使ってみる方法を記載してみましょう5 (第6章まではrails db:migrateが必要になることはありませんが、いずれ必要になるので今のうちに含めてしまいましょう)。
+
+リスト 3.3: サンプルアプリケーション向けに書き換えたREADME
+README.md
+# Ruby on Rails チュートリアルのサンプルアプリケーション
+
+これは、次の教材で作られたサンプルアプリケーションです。   
+[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
+[Michael Hartl](http://www.michaelhartl.com/) 著
+
+## ライセンス
+
+[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
+ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
+詳細は [LICENSE.md](LICENSE.md) をご覧ください。
+
+## 使い方
+
+このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
+その後、次のコマンドで必要になる RubyGems をインストールします。
+
+```
+$ bundle install --without production
+```
+
+その後、データベースへのマイグレーションを実行します。
+
+```
+$ rails db:migrate
+```
+
+最後に、テストを実行してうまく動いているかどうか確認してください。
+
+```
+$ rails test
+```
+
+テストが無事に通ったら、Railsサーバーを立ち上げる準備が整っているはずです。
+
+```
+$ rails server
+```
+
+詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
+を参考にしてください。
+書き終わったら、この変更をコミットします。
+
+$ git commit -am "Improve the README"
+1.4.4でgit commit -a -m "Message"というGitコマンドを実行したことを思い出してください。あのときは “すべてを変更” (-a) オプションとコミットメッセージを追加するオプション (-m) を使いました。上で実行したコマンドで示したように、実はこれらの2つのオプションを1つにまとめてgit commit -am "Message"と実行することができます。
+
+本書では今後もこのサンプルアプリケーションを使い続けるので、Bitbucket上にリポジトリを作成してpushしておくとよいでしょう。
+
+$ git remote add origin git@bitbucket.org:ユーザー名/sample_app.git
+$ git push -u origin --all     # リポジトリやその参照先もすべてプッシュする
+後でproduction環境にプッシュするときに悩まずに済むよう、アプリをなるべく早い段階でHerokuにデプロイしておくとよいでしょう。第1章や第2章のときと同様に、リスト 3.4やリスト 3.5にある「hello, world」の手順に従って進めてみましょう。
+
+(RailsのデフォルトのページはHeroku上ではうまく表示されない仕様になっています。このため、次のような変更を加えないとデプロイが成功したかどうかが分かりづらい、というのが本当の理由です。)
+
+リスト 3.4: helloアクションをApplicationコントローラーに追加する
+app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+
+  def hello
+    render html: "hello, world!"
+  end
+end
+リスト 3.5: ルートルーティングを設定する
+config/routes.rb
+Rails.application.routes.draw do
+  root 'application#hello'
+end
+終わったら、次のように変更をコミットしてHerokuにプッシュします。
+
+$ git commit -am "Add hello"
+$ git push
+$ heroku create
+$ git push heroku master
+1.5のときと同じように警告メッセージが表示されることがありますが、無視して構いません。この警告は7.5で解決する予定です。これで、HerokuアプリのURL以外は、図 1.23のとおりに表示されるはずです。
+
+この後も、本チュートリアルを進めながらアプリケーションをこまめにプッシュ/デプロイすることをおすすめします。こうすることでリモートバックアップにもなり、production環境でのエラーを早めに確認することもできます。なお、Herokuに展開するときにエラーが発生した場合は、次のコマンドを実行して本番環境のログを取得してください。このログは、問題を特定するときに役立ちます。
+
+$ heroku logs
+注: 今後Herokuで何らかの本番アプリケーションを運用する予定があるなら、7.5のproduction用Webサーバーの設定に必ず従ってください。
+
+演習
+BitbucketがMarkdown記法のREADME (リスト 3.3) をHTMLとして正しく描画しているか、確認してみてください。
+本番環境 (Heroku) のルートURLにアクセスして、デプロイが成功したかどうか確かめてみてください。
+3.2 静的ページ
+3.1の準備がすべて完了したら、いよいよサンプルアプリケーションの開発に取りかかりましょう。この節では、まずはRailsのアクションやビューを使って静的なHTMLのみのページを作成し、その後、静的なページを動的なページに作り変えていきます6。Railsのアクションは、コントローラ (1.3.3で説明したMVCの「C」) の中に置きます。また、コントローラ内の各アクションは目的に沿って互いに関連した操作 (作成や削除など) を行います。コントローラについては第2章でも簡単に触れましたが、第6章で説明するRESTアーキテクチャを読むと理解が深まります。一言でまとめると、コントローラとは (基本的に動的な) Webページの集合を束ねるコンテナのことです。現在どのディレクトリで作業しているかがわからなくなった場合は、1.3 (図 1.7)を再度参照して、Railsのディレクトリ構造を確認してください。この節では、主にapp/controllersディレクトリやapp/viewsディレクトリ内で作業を進めます
+
+1.4.4で学んだことを思い出しましょう。Gitを使う場合は、masterブランチでずっと作業するのではなく、その都度トピックブランチを作成して作業するのがよい習慣です。Gitでバージョン管理を行っているのであれば、次のコマンドを実行して、静的なページ用のトピックブランチをチェックアウトしましょう。
+
+$ git checkout -b static-pages
+3.2.1 静的なページの生成
+静的なページの作成は、第2章でscaffold生成に使った generate スクリプトで、コントローラを生成することから始めます。このコントローラは静的なページを扱うためにしか使わないので、コントローラ名を「Static Pages」に決め、表記をキャメルケースのStaticPagesにします。続いて、Homeページ、Helpページ、Aboutページに使うアクションもそれぞれ作成することにし、アクション名はすべて小文字のhome、help、aboutにします。generateスクリプトではアクション名をまとめて指定することもできるので、コマンドラインでHomeページとHelpページ用のアクションもまとめて生成することにします。なお、Aboutページだけは学習のため、あえてコマンドラインでは作成せず、3.3で手動で追加することにします。これらの要素を盛り込んだStaticPagesコントローラ生成コマンドと実行結果をリスト 3.6に示します。
+
+リスト 3.6: StaticPagesコントローラを生成する
+$ rails generate controller StaticPages home help
+      create  app/controllers/static_pages_controller.rb
+       route  get 'static_pages/help'
+       route  get 'static_pages/home'
+      invoke  erb
+      create    app/views/static_pages
+      create    app/views/static_pages/home.html.erb
+      create    app/views/static_pages/help.html.erb
+      invoke  test_unit
+      create    test/controllers/static_pages_controller_test.rb
+      invoke  helper
+      create    app/helpers/static_pages_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/static_pages.coffee
+      invoke    scss
+      create      app/assets/stylesheets/static_pages.scss
+追伸: rails gはrails generateコマンドの短縮形であり、Railsでサポートされている多数の短縮形の１つです (表 3.1)。本チュートリアルではわかりやすさを重んじているため、こうしたコマンドは短縮せずに表記していますが、現実のRails開発者はほぼ間違いなく表 3.1の短縮形を常用しています7。
+
+完全なコマンド  短縮形
+$ rails server  $ rails s
+$ rails console $ rails c
+$ rails generate  $ rails g
+$ rails test  $ rails t
+$ bundle install  $ bundle
+表 3.1: Railsで使える短縮形の例
+次に進む前に、StaticPagesコントローラファイルをGitリポジトリに追加しておきましょう。
+
+$ git add -A
+$ git commit -m "Add a Static Pages controller"
+$ git push -u origin static-pages
+最後のコマンドでは、static-pagesトピックブランチをBitbucketにプッシュしています。以後は、単に次のコマンドを実行するだけで同じプッシュが行われるようになります。
+
+$ git push
+上のコミット〜プッシュの流れは、著者が実際の開発でよく使っていたパターンに基づいていますが、ここから先は途中でこのような指示をいちいち書くことはしませんので、各自こまめにプッシュするようにしてください。
+
+リスト 3.6では、コントローラ名をキャメルケース (単語の頭文字を大文字にしてつなぎ合わせた名前) で渡していることに注目してください。こうすると、StaticPagesコントローラ名をスネークケース (単語間にアンダースコアを加えて繋ぎ合わせた名前) にしたファイルstatic_pages_controller.rbを自動的に生成します。ただし、上のような命名は単なる慣習に過ぎません。実際、コマンドライン上で次のようなスネークケースのコントローラ名を入力しても、
+
+$ rails generate controller static_pages ...
+先ほどと同様にstatic_pages_controller.rbというコントローラが生成されます。これは、Rubyがクラス名にキャメルケースを使う慣習があり (詳細は4.4で説明します)、また、キャメルケースの名前を使うことが好まれているためです。これらの慣習に必ず従わなければいけないということではありません。(同様にRubyでは、ファイル名をスネークケースで記述する慣習があります。このためRailsのgenerateスクリプトでは、underscoreメソッドを使ってキャメルケースをスネークケースに変換しています。)
+
+ところで、もし自動生成に失敗するようなことがあれば、それは元に戻す処理を学ぶ良い機会にもなりますね。コラム 3.1で元に戻す方法を紹介しているので、もし機会があれば実際に試してみましょう。
+
+コラム 3.1. 元に戻す方法
+どれほど十分に気を付けていたとしても、Railsアプリケーションの開発中に何か失敗してしまうことはありえます。ありがたいことに、Railsにはそのような失敗をカバーする機能がいくつもあります。
+
+一般的なシナリオの1つは、生成したコードを元に戻したい場合です。例えばコントローラを生成した後で、もっといいコントローラ名を思い付き、生成したコードを削除したくなった場合などです。リスト 3.6のように、Railsはコントローラ以外にも関連ファイルを大量に生成するので、生成されたコントローラファイルを削除するだけでは元に戻りません。自動生成されたコードを元に戻すためには、新規作成されたファイルを削除するだけではなく、既存のファイルに挿入されたコードも削除する必要があります (実際、2.2や2.3でも説明したように、rails generateを実行するとルーティングのroutes.rbファイルも自動的に変更されるので、これも元に戻さなくてはなりません)。このようなときは、「generate」という言葉に因んで、rails destroyというコマンドを実行することで元に戻すことができます。例えば次の2つのコマンドは、自動生成と、それに対応する取り消し処理の例です。
+
+  $ rails generate controller StaticPages home help
+  $ rails destroy  controller StaticPages home help
+なお第6章でも、次のようにモデルを自動生成する方法を紹介します。
+
+  $ rails generate model User name:string email:string
+モデルの自動生成についても、同様の方法で元に戻すことができます。
+
+  $ rails destroy model User
+(上のコマンドからわかるように、モデル名以外の引数は不要です。その理由については第6章で説明します)。
+
+また、第2章でも簡単に紹介しましたが、マイグレーションの変更を元に戻す方法も用意されています。詳細は第6章で説明しますが、簡単に紹介すると、まずdb:migrateでデータベースのマイグレーションを変更します。
+
+  $ rails db:migrate
+元に戻したいときは、db:rollbackで1つ前の状態に戻します。
+
+  $ rails db:rollback
+最初の状態に戻したいときは、VERSION=0オプションを使います。
+
+  $ rails db:migrate VERSION=0
+既にお気付きの方もいると思いますが、マイグレーションは逐次的に実行され、それぞれのマイグレーションに対してバージョン番号が付与されます。したがって、上記の0を別の数字に置き換えることによって、指定したバージョンの状態に戻すことができます。
+
+開発中に袋小路に迷い込んでしまった場合でも、これらの機能を使えば元の状態を復元できます。
+
+リスト 3.6のようにStaticPagesコントローラを生成すると、(config/routes.rb)ファイルが自動的に更新されます (1.3.4のときと同様です)。このルーティングファイルはルーターの実装を受け持ち (図 2.11)、URLとWebページの対応関係を定義します。このルーティングファイルはRailsのconfigディレクトリの下に置かれます。このディレクトリには、Railsの設定ファイルがまとめて置かれます (図 3.1)。
+
+images/figures/config_directory_4th_edition
+図 3.1: サンプルアプリケーションのconfigディレクトリの内容
+先ほどリスト 3.6のようにhome アクションと helpアクションを生成したので、routesファイルにはそれぞれのアクションで使われるルールが定義されています (リスト 3.7)。
+
+リスト 3.7: StaticPagesコントローラ内のhomeアクションとhelpアクションで使うルーティング
+config/routes.rb
+Rails.application.routes.draw do
+  get  'static_pages/home'
+  get  'static_pages/help'
+  root 'application#hello'
+end
+ここで次のルールに注目してみましょう。
+
+get 'static_pages/home'
+このルールは、/static_pages/homeというURLに対するリクエストを、StaticPagesコントローラのhomeアクションと結びつけています。今回はgetと書かれているため、GETリクエストを受け取ったときに対応するアクションを結びつけています。なお、ここでいうGETリクエストとは、HTTP (HyperText Transfer Protocol) が対応しているメソッドの1つです (コラム 3.2)。
+
+今回の場合は、StaticPagesコントローラ内にhomeアクションを追加したので、/static_pages/homeにアクセスすることでページを取得 (GET) できるようになりました。結果を確認するには、1.3.2に従って次のようにRailsのdevelopmentサーバーを起動します。
+
+$ rails server
+Railsサーバーが立ち上がったら、/static_pages/homeにアクセスして結果を表示します (図 3.2)。
+
+images/figures/raw_home_view_3rd_edition
+図 3.2: /static_pages/homeにアクセスした結果
+コラム 3.2. GETやその他のHTTPメソッドについて
+HTTP (HyperText Transfer Protocol) には4つの基本的な操作があり、それぞれGET、POST、PATCH、DELETEという4つの動詞に対応づけられています。クライアント (例えばFirefoxやSafariなどのWebブラウザ) とサーバー (ApacheやNginxなどのWebサーバー) は、上で述べた4つの基本操作を互いに認識できるようになっています (ローカル環境でRailsアプリケーションを開発しているときは、クライアントとサーバーが同じコンピュータ上で動いていますが、一般的には、それぞれ別のコンピュータで動作しているという点を理解しておいてください)。Railsを含む多くのWebフレームワークは、HTTPの各操作を発展させたRESTアーキテクチャの影響を受けています。第2章でも簡単に触れましたが、第7章ではより深い内容について学びます。
+
+GETは最も頻繁に使われるHTTPリクエストで、主にWeb上のデータを読み取る (get) ときに使われます。「ページを取得する (get a page)」という意味のとおり、ブラウザはhttp://www.google.com/やhttp://www.wikipedia.org/などのWebサイトを開くたびにGETリクエストをサイトに送信します。POSTは、GETの次によく使用されるリクエストで、ページ上のフォームに入力した値を、ブラウザから送信する時に使われます。例えばRailsアプリケーションでは、POSTリクエストは何かを作成するときによく使われます (なお本来のHTTPでは、POSTを更新に使ってもよいとしています)。例えばユーザー登録フォームで新しいユーザーを作成するときは、POSTリクエストを送信します。他にも、PATCHと DELETEという2つの操作があり、それぞれサーバー上の何かを更新したり削除したりするときに使われます。これら2つの操作は、GETやPOSTほどは使われていません。これは、ブラウザがPATCHとDELETEをネイティブでは送信しないからです。しかし、Ruby on Railsなどの多くのWebフレームワークは、ブラウザがこれらの操作のリクエストを送信しているかのように見せかける技術 (偽装) を駆使して、PATCHとDELETEという操作を実現しています。結果として、Railsはこの4つのHTTPリクエスト (GET・POST・PATCH・DELETE) を全てサポートできるようになりました。
+
+このページがどのようにして表示されるのかを理解するために、まずはテキストエディタでStaticPagesコントローラを開いてみましょう。リスト 3.8のような内容になっているはずです。ここで、第2章のUsersコントローラやMicropostsコントローラとは異なり、StaticPagesコントローラは一般的なRESTアクションに対応していないことに注意してください。これは、静的なページの集合に対しては、適切なアクションと言えます。言い換えると、RESTアーキテクチャは、あらゆる問題に対して最適な解決方法であるとは限らないということです。
+
+リスト 3.8: リスト 3.6で生成されるStaticPagesコントローラ
+app/controllers/static_pages_controller.rb
+class StaticPagesController < ApplicationController
+  def home
+  end
+
+  def help
+  end
+end
+リスト 3.8のclassというキーワードから、static_pages_controller.rbはStaticPagesControllerというクラスを定義していることが分かります。このようなクラスは、メソッド (関数とも呼ばれます) をまとめるときに便利な手法です。今回の例ではdefというキーワードを使って、homeアクションやhelpアクションを定義しています。2.3.4で説明したように、山カッコ<は、StaticPagesControllerがApplicationControllerというRailsのクラスを継承していることを示しています。この後も説明しますが、今回作成したページにはRails特有の機能が多数使われています (クラスや継承については4.4で詳しく解説します)。
+
+今回のStaticPagesコントローラにあるメソッドは、次のようにどちらも最初は空になっています。
+
+def home
+end
+
+def help
+end
+純粋なRuby言語であれば、これらのメソッドは何も実行しません。しかし、Railsでは動作が異なります。StaticPagesControllerはRubyのクラスですが、ApplicationControllerクラスを継承しているため、StaticPagesControllerのメソッドは (たとえ何も書かれていなくても) Rails特有の振る舞いをします。具体的には、/static_pages/homeというURLにアクセスすると、RailsはStaticPagesコントローラを参照し、homeアクションに記述されているコードを実行します。その後、そのアクションに対応するビュー (1.3.3で説明したMVCのVに相当) を出力します。今回の場合、homeアクションが空になっているので、/static_pages/homeにアクセスしても、単に対応するビューが出力されるだけです。では、ビューはどのように出力されるのでしょうか。また、どのビューが表示されるのでしょうか。
+
+リスト 3.6をもう一度注意深く読んでみると、アクションとビューの関係について推測がつくと思いますが、homeアクションはhome.html.erbというビューに対応しています。.erbの詳細については3.4で説明しますが、ファイル名に.htmlが含まれていることからわかるように、基本的にはHTMLと同じような構造になっています (3.9)。
+
+リスト 3.9: Homeページ用に生成されたビュー
+app/views/static_pages/home.html.erb
+<h1>StaticPages#home</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+helpアクションに対応するビューも、上のコードと似ています (リスト 3.10)。
+
+リスト 3.10: Helpページ用に生成されたビュー
+app/views/static_pages/help.html.erb
+<h1>StaticPages#help</h1>
+<p>Find me in app/views/static_pages/help.html.erb</p>
+どちらのビューも単なるプレースホルダになっています。トップレベルの見出しがh1タグの中にあり、関連するファイルへの絶対パスがpタグの中に書かれています。
+
+演習
+Fooというコントローラを生成し、その中にbarとbazアクションを追加してみてください。
+コラム 3.1で紹介したテクニックを駆使して、Fooコントローラとそれに関連するアクションを削除してみてください。
+3.2.2 静的なページの調整
+3.4からは (ほんの少しだけ) 動的なコンテンツを追加しますが、リスト 3.9やリスト 3.10で見てきたように、重要なのは「Railsのビューの中には静的なHTMLがある」という点です。これは、Railsの知識が無くてもHomeページやHelpページを修正できることを意味しています。次のリスト 3.11とリスト 3.12がその一例です。
+
+リスト 3.11: HomeページのHTMLを修正する
+app/views/static_pages/home.html.erb
+<h1>Sample App</h1>
+<p>
+  This is the home page for the
+  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+  sample application.
+</p>
+リスト 3.12: HelpページのHTMLを修正する
+app/views/static_pages/help.html.erb
+<h1>Help</h1>
+<p>
+  Get help on the Ruby on Rails Tutorial at the
+  <a href="https://railstutorial.jp/help">Rails Tutorial help page</a>.
+  To get help on this sample app, see the
+  <a href="https://railstutorial.jp/#ebook"><em>Ruby on Rails Tutorial</em>
+  book</a>.
+</p>
+リスト 3.11とリスト 3.12の結果をそれぞれ図 3.3と図 3.4に示します。
+
+images/figures/custom_home_page
+図 3.3: 修正されたHomeページ
+images/figures/custom_help_page_4th_edition
+図 3.4: 修正されたHelpページ
+3.3 テストから始める
+3.2.2でサンプルアプリのHomeページとHelpページを作成して中身も書き加えたので、今度はAboutページを同様に追加します。何らかの変更を行う際には、常に「自動化テスト」を作成して、機能が正しく実装されたことを確認する習慣をぜひ身に付けましょう。アプリケーションを開発しながらテストスイート (Test Suite) をみっちり作成しておけば、いざというときのセーフティネットにもなり、それ自体がアプリケーションのソースコードの「実行可能なドキュメント」にもなります。テストを作成するということは、その分コードを余分に書くことになりますが、正しく行えば、むしろテストがないときよりも確実に開発速度がアップします。テストが揃っていれば、バグを追うために余分な時間を使わずに済むためです。そんなふうにうまくいくとは信じられない人もいるかもしれませんが、一度でもテスト作成が上達すれば間違いなくこのとおりになります。だからこそ、テスト作成の習慣をできるだけ早いうちに身につけることが重要なのです。
+
+テストが重要であるという点ではRails開発者の意見はほぼ一致していますが、細かい点では異論が生じているのも確かです。特に、テスト駆動開発 (TDD)8 (テストの手法の１つ: 最初に「正しいコードがないと失敗するテスト」を書き、次に本編のコードを書いてそのテストがパスするようにする) の是非については、当分議論が終わりそうにありません。筆者も悩んだ末、Ruby on Rails チュートリアルではこの点について「とにかく〜すべし」的な原理主義を避けることにしました。テストに関しては、原則として手軽かつ直感的なアプローチを採用し、必要に応じてTDDに切り替えるようにしています (コラム 3.3)。
+
+コラム 3.3. 結局テストはいつ行えばよいのか
+それではいつ、どんなふうにテストを行えばよいのでしょうか。この点を理解するために、テストを行う目的をもう一度確認してみましょう。著者は、テストには次の3つのメリットがあると考えます。
+
+テストが揃っていれば、機能停止に陥るような回帰バグ (Regression Bug: 以前のバグが再発したり機能の追加/変更に副作用が生じたりすること) を防止できる。
+テストが揃っていれば、コードを安全にリファクタリング (機能を変更せずにコードを改善すること) ができる。
+テストコードは、アプリケーションコードから見ればクライアントとして動作するので、アプリケーションの設計やシステムの他の部分とのインターフェイスを決めるときにも役に立つ。
+上の3つのメリットは、テストを先に書かなくても得ることができますが、それでもテスト駆動開発 (TDD) という手法をいつでも使えるようにしておけば、間違いなく多くの場面で役に立ちます。テストの手法やタイミングは、ある意味テストをどのぐらいすらすら書けるかで決まると言ってよいでしょう。たいていの開発者は、テストを書くのに慣れてくるとテストを先に書くようになります。その他にも、アプリケーションのコードと比べてテストがどのぐらい書きにくいか、必要な機能をどのぐらい正確に把握しているか、その機能が将来廃止される可能性がどのぐらいあるかによっても異なってくるでしょう。
+
+こういうときのために、「テスト駆動」にするか「一括テスト」にするかを決める目安となるガイドラインがあると便利です。著者の経験を元に、次のようにまとめてみました。
+
+アプリケーションのコードよりも明らかにテストコードの方が短くシンプルになる (=簡単に書ける) のであれば、「先に」書く
+動作の仕様がまだ固まりきっていない場合、アプリケーションのコードを先に書き、期待する動作を「後で」書く
+セキュリティが重要な課題またはセキュリティ周りのエラーが発生した場合、テストを「先に」書く
+バグを見つけたら、そのバグを再現するテストを「先に」書き、回帰バグを防ぐ体制を整えてから修正に取りかかる
+すぐにまた変更しそうなコード (HTML構造の細部など) に対するテストは「後で」書く
+リファクタリングするときは「先に」テストを書く。特に、エラーを起こしそうなコードや止まってしまいそうなコードを集中的にテストする
+上のガイドラインに従う場合、現実には最初にコントローラやモデルのテストを書き、続いて統合テスト (モデル/ビュー/コントローラにまたがる機能テスト) を書く、ということになります。また、不安定な要素が特に見当たらないアプリケーションや、(主にビューが) 頻繁に改定される可能性の高いアプリケーションのコードを書くときには、思い切ってテストを省略してしまうこともあります。
+
+本書における主要なテストは、コントローラテスト (この節より)、モデルテスト (第6章より)、統合テスト (第7章より) の3つです。統合テストでは、ユーザーがWebブラウザでアプリケーションとやりとりする操作をシミュレートできるので特に強力です。統合テストはテストにおける最も主要な武器の1つとなりますが、まずは取っ付きやすいコントローラテストから始めることにしましょう。
+
+3.3.1 最初のテスト
+それではサンプルアプリケーションのAboutページの作成に取りかかります。やってみるとわかりますが、このページでは大したことは行わないので、テストは驚くほど短く単純です。早速コラム 3.3のガイドラインに沿って、テストを先に書くことにしましょう。続いてそのテストを実行して「失敗」することを確認し、実際のアプリケーションコードを書きます。
+
+初めて書くテストがいきなり「テスト先行」というのは、Ruby on Railsの知識がある程度以上必要なため、少々敷居が高い面もあります。今の段階でテストを書かせようとすると、尻込みしてしまう人もいるかもしれません。しかしご心配なく。面倒な部分は既にRailsが全部面倒を見てくれています。rails generate controller (リスト 3.6) を実行した時点でテストファイルがちゃんと作成されているので、それを利用しましょう。
+
+$ ls test/controllers/
+static_pages_controller_test.rb
+生成されたテストを見てみましょう (リスト 3.13)。
+
+リスト 3.13: StaticPagesコントローラのデフォルトのテスト green
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+  end
+end
+現時点では、上のリスト 3.13の文法をいきなり理解する必要はありません。今は「このファイルにはテストが2つ書かれている」ことを認識していただければ十分です。その2つのテストは、リスト 3.6で生成したコントローラの2つのアクションであるHomeとHelpに対応して生成されたものです。それぞれのテストでは、アクションをgetして正常に動作することを確認します。この確認は「アサーション」(assertion: 主張、断言) と呼ばれる手法で行います。getは、HomeページやHelpページがいわゆる「GETリクエストを受け付ける」普通のWebページであるということを示します (コラム 3.2)。その次の「response:success」は、実際にはHTTPのステータスコード (ここでは200 OK) を表します。つまり、次のテストは
+
+test "should get home" do
+  get static_pages_home_url
+  assert_response :success
+end
+言葉で表すと「Homeページのテスト。GETリクエストをhomeアクションに対して発行 (=送信) せよ。そうすれば、リクエストに対するレスポンスは[成功]になるはず」となります。
+
+テストを書くサイクルに入る前に、まずは現在のテストスイートをそのまま実行して、問題なくパスすることを確認しておきましょう。テストの実行には次のようにrailsコマンドを使います。
+
+リスト 3.14: green
+$ rails test
+2 tests, 2 assertions, 0 failures, 0 errors, 0 skips
+テストスイートは期待どおり成功 (green) します (成功時に色を表示させるためには、3.6.1で説明するminitest reportersを追加する必要がありますが、見やすくなるだけで必須ではありません)。ところで、テストの実行にはある程度時間がかかります。これには２つの要因が絡んでいます。(1) Springサーバーを起動してRails環境を事前読み込みするのに時間がかかる。ただしこれは最初の1回だけです。(2) Rubyそのものの起動に時間がかかる (2番目の要因については、3.6.2で紹介するGuardを導入することで改善できます)。
+
+3.3.2 Red
+コラム 3.3で解説したように、テスト駆動開発のサイクルは「失敗するテストを最初に書く」「次にアプリケーションのコードを書いて成功させる (パスさせる）」「必要ならリファクタリングする」のように進みます。多くのテストツールでは、テストの失敗を red 、成功したときを green で表します。ここから、このサイクルを「red ・ green ・ REFACTOR」と呼ぶこともあります。これに従って最初のサイクルを完了させましょう。まず失敗するテストを書いて red になるようにします。テストを green にするのは3.3.3、リファクタリングは3.4.3で行います9。
+
+サイクルの記念すべき第一歩はAboutページ用の失敗するテストを書くことです。リスト 3.13を参考にすれば、正しいテストコードを何となく想像できると思います。正しいテストコードをリスト 3.15に示します。
+
+リスト 3.15: Aboutページのテストred
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+  end
+
+  test "should get about" do
+    get static_pages_about_url
+    assert_response :success
+  end
+end
+リスト 3.15のハイライト行を見ると、他のHomeページ用テストやHelpページ用テストとほとんど同じであることがわかります。違いは「home」や「help」の部分が「about」に変わっている点だけです。
+
+テストを実行すると、期待どおり失敗します。
+
+リスト 3.16: red
+$ rails test
+3 tests, 2 assertions, 0 failures, 1 errors, 0 skips
+3.3.3 Green
+テストがめでたく失敗した (red) ので、今度はこのテストのエラーメッセージを頼りにテストがパスする (green) ようにコードを書くことで、Aboutページを実装します。
+
+失敗したテストのエラーメッセージをもっと詳しく見ていきましょう。
+
+リスト 3.17: red
+$ rails test
+NameError: undefined local variable or method `static_pages_about_url'
+このエラーメッセージによれば、「AboutページへのURLが見つからない」とあります。このメッセージをヒントに、ルーティングファイルを修正してみましょう。リスト 3.7のときと同じ要領で、変更を行った結果をリスト 3.18に示します。
+
+リスト 3.18: about用のルートを追加するred
+config/routes.rb
+Rails.application.routes.draw do
+  get  'static_pages/home'
+  get  'static_pages/help'
+  get  'static_pages/about'
+  root 'application#hello'
+end
+リスト 3.18のハイライト行では、/static_pages/aboutというURLに対してGETリクエストが来たら、StaticPagesコントローラのaboutアクションに渡すようRailsに指示しています。この結果、自動的に次のようなヘルパーが使えるようになります。
+
+static_pages_about_url
+修正が終わったらテストスイートをもう一度実行してみましょう。まだ redのままです。しかし今度はメッセージが少し変わりました。
+
+リスト 3.19: red
+$ rails test
+AbstractController::ActionNotFound:
+The action 'about' could not be found for StaticPagesController
+このエラーメッセージから、「StaticPagesコントローラにaboutアクションがない」ということがわかります。リスト 3.8のhomeやhelpと同じようにaboutアクションを追加します (リスト 3.20)。
+
+リスト 3.20: aboutアクションが追加されたStaticPagesコントローラred
+app/controllers/static_pages_controller.rb
+class StaticPagesController < ApplicationController
+
+  def home
+  end
+
+  def help
+  end
+
+  def about
+  end
+end
+今度はどうでしょう。まだ redですが、エラーメッセージがまた少し変わりました。
+
+$ rails test
+ActionController::UnknownFormat: StaticPagesController#about
+is missing a template for this request format and variant.
+今度はテンプレートがないようです。Railsでは、テンプレートとはすなわち「ビュー」を指します。3.2.1で説明したように、homeというアクションはhome.html.erbというビューに関連付けられます。このビューはapp/views/static_pagesディレクトリにあるので、ここにabout.html.erbというファイルを作ればよさそうです。
+
+ファイルの作成方法はシステムの設定によってさまざまですが、たいていのテキストエディタでは、ディレクトリをCtrl+クリックすればコンテキストメニューに [New File] や [ファイルを作成] などのメニューが表示されます。あるいはエディタの[File]メニューでファイルを作成して、このディレクトリに保存しても構いません。個人的にはUnixのtouchコマンドでファイルを作成するのがカッコいいと思います。
+
+$ touch app/views/static_pages/about.html.erb
+Learn Enough Command Line to Be DangerousのListing (英語) に詳細がありますが、touchコマンドは本来、ファイルやディレクトリのタイムスタンプだけを更新するためのコマンドなのですが、ファイルが存在しない場合には空ファイルを作成するという一種の副作用があります (クラウドIDEをご利用の場合はtouchコマンドでファイル作成後、1.3.1のようにファイルツリーを更新する必要があります)。こういったテクニックを少しずつ蓄えていくことが「熟練」への道です (コラム 1.1)。
+
+さて、適切なディレクトリにabout.html.erbファイルを作成したら、リスト 3.21のとおりに内容を書き換えます。
+
+リスト 3.21: Aboutページのコードgreen
+app/views/static_pages/about.html.erb
+<h1>About</h1>
+<p>
+  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+  is a <a href="https://railstutorial.jp/#ebook">book</a> and
+  <a href="https://railstutorial.jp/#screencast">screencast</a>
+  to teach web development with
+  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+  This is the sample application for the tutorial.
+</p>
+今度のrails testの結果は greenになるはずです。
+
+リスト 3.22: green
+$ rails test
+3 tests, 3 assertions, 0 failures, 0 errors, 0 skips
+もちろん、実際にブラウザを起動して、テストが正しく動いているかどうかを確かめることもできます (図 3.5)。
+
+images/figures/about_us_3rd_edition
+図 3.5: 新しいAboutページ (/static_pages/about).
+3.3.4 Refactor
+テストが greenになったので、安心してコードをリファクタリングできるようになりました。アプリケーションの開発が進むと、コードのどこからともなく「腐敗臭」が漂い始めます。コードや記法の統一が崩れて読みづらくなる、クラスやメソッドが何百行にも膨れ上がって読む気を削がれる、なぜこのコードがここにあるのか最早誰もその理由を思い出せなくなる、同じコードがあちこちにコピペされて少しずつ書き換えられ手に負えなくなる、などです。コンピュータにしてみればどんなに汚らしいコードであろうと、そこにあるがままに実行するだけですが、人間はそういうわけにはいきません。こまめにリファクタリングを繰り返してコードを常にすみずみまで美しくコンパクトに保ち、他の開発者や未来の自分の開発意欲を阻喪することのないようにしなければなりません。このサンプルアプリは生まれたてなので、今のところリファクタリングの必要な箇所はほぼどこにも見当たりません。しかし「一匹いれば30匹いると思え」、コードの腐敗臭はどんな小さな隙間からも忍び寄ってきます。こまめなリファクタリングの習慣をできるだけ早いうちに身につけるためにも、少々無理やりに3.4.3から始めることにします。
+
+3.4 少しだけ動的なページ
+静的なページのアクションやビューをいくつか作成できたので、今度はそれをほんの少しだけ動的にしてみましょう。ページの内容に応じて、ページのタイトルを自ら書き換えて表示するようにします。タイトルを自動で変えるぐらいのことが真の動的コンテンツと呼べるかどうかは議論の余地があると思いますが、いずれにしろこのページは、第7章で紹介する本格的な動的コンテンツの基礎となります。
+
+ここでの目標は、Homeページ、Helpページ、Aboutページをそれぞれ編集し、最終的にページごとに異なるタイトルを表示することです。ここではビューの<title>タグの内容を変更します。多くのブラウザでは、titleタグの内容をブラウザウィンドウの上部にウィンドウタイトルとして表示します。titleタグは、いわゆるSEO (Search Engine Optimization: 検索エンジン最適化) においても重要な役割を果たします。今度は「red ・ green ・ REFACTOR」のサイクルをすべて行うことにします。ページタイトルの簡単なテストを書き (red)、3つのページにタイトルを追加し (green)、レイアウトファイルを活用してコードの重複を解決します (REFACTOR)。本節の終わりまでに、3つの静的ページのタイトルを「<ページ名> | Ruby on Rails Tutorial Sample App」という形式に変更します。「<ページ名>」の部分が、表示しているページに応じて動的に変わります (表 3.2)。
+
+前述のrails newコマンド (リスト 3.1) を実行すると、レイアウトもデフォルトで作成されます。ここでは学習のため、一時的に次のようにファイル名を変更します。
+
+$ mv app/views/layouts/application.html.erb layout_file
+普通は、実際のアプリケーション開発時に上のような操作を行うことはありません。ここでは、レイアウトファイルの役割をよりわかりやすく説明するために、最初にレイアウトファイルを無効にしています。
+
+ページ  URL 基本タイトル  追加タイトル
+Home  /static_pages/home  "Ruby on Rails Tutorial Sample App" "Home"
+Help  /static_pages/help  "Ruby on Rails Tutorial Sample App" "Help"
+About /static_pages/about "Ruby on Rails Tutorial Sample App" "About"
+表 3.2: サンプルアプリケーションの (ほぼ) 静的なページ。
+3.4.1 タイトルをテストする (Red)
+ページタイトルを追加する前に、HTMLについて今一度おさらいしておきましょう。典型的なWebページは、リスト 3.23のようなHTMLの構造を持っています (HTMLの詳細は Learn Enough HTML to Be Dangerousを参照)。
+
+リスト 3.23: Webページの典型的なHTML構造
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeting</title>
+  </head>
+  <body>
+    <p>Hello, world!</p>
+  </body>
+</html>
+リスト 3.23の構造には次の３つが含まれています。 1) document type (doctype)は使用するHTMLのバージョン (ここではHTML5) をブラウザに対して宣言します10。 2) headセクション。ここではtitleタグに囲まれた「Greeting」(=あいさつ) という文字があります。 3) bodyセクション。ここには「Hello, world!」という文字列があります。「Hello, world!」は、p (paragraph) タグの中にあります (HTMLではスペースやタブが無視されるので、インデントはあってもなくても大丈夫です。とはいえインデントがあると、HTMLのデータ構造が理解しやすくなります)。
+
+表 3.2の各タイトルについて簡単なテストを書きます (リスト 3.15)。このテストで使っているassert_selectメソッドでは、特定のHTMLタグが存在するかどうかをテストします (この種のアサーションメソッドはその名から「セレクタ」と呼ばれることもあります)11。
+
+assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+上のセレクタは、<title>タグ内に「Home | Ruby on Rails Tutorial Sample App」という文字列があるかどうかをチェックします。同じ要領で3つの静的ページを書き換えます (リスト 3.24)。
+
+リスト 3.24: StaticPagesコントローラのタイトルをテストする red
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+    assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+    assert_select "title", "Help | Ruby on Rails Tutorial Sample App"
+  end
+
+  test "should get about" do
+    get static_pages_about_url
+    assert_response :success
+    assert_select "title", "About | Ruby on Rails Tutorial Sample App"
+  end
+end
+リスト 3.24どおりにテストを作成すると、テストスイートは redになります。
+
+リスト 3.25: red
+$ rails test
+3 tests, 6 assertions, 3 failures, 0 errors, 0 skips
+3.4.2 タイトルを追加する (Green)
+今度は各ページにタイトルを追加して、3.4.1のテストがパスするようにしましょう。リスト 3.23の基本HTML構造をカスタムのHomeページ (リスト 3.11) に追加すると (リスト 3.26のようになります。
+
+リスト 3.26: 完全なHTML構造を備えたHomeページのビューred
+app/views/static_pages/home.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Sample App</h1>
+    <p>
+      This is the home page for the
+      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+      sample application.
+    </p>
+  </body>
+</html>
+このページの表示を図 3.6に示します12。
+
+images/figures/home_view_full_html_4th_ed
+図 3.6: タイトルが付いたHomeページ
+Helpページ (リスト 3.12) やAboutページ (リスト 3.21) についても、同じ要領でリスト 3.27 や リスト 3.28のようなコードに変更します。
+
+リスト 3.27: 完全なHTML構造を備えたHelpページのビュー red
+app/views/static_pages/help.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Help | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Help</h1>
+    <p>  Get help on the Ruby on Rails Tutorial at the
+      <a href="https://railstutorial.jp/help">Rails Tutorial help
+      page</a>.
+      To get help on this sample app, see the
+      <a href="https://railstutorial.jp/#ebook">
+      <em>Ruby on Rails Tutorial</em> book</a>.
+    </p>
+  </body>
+</html>
+リスト 3.28: 完全なHTML構造を備えたAboutページのビューgreen
+app/views/static_pages/about.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p>
+      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+      is a <a href="https://railstutorial.jp/#ebook">book</a> and
+      <a href="https://railstutorial.jp/#screencast">screencast</a>
+      to teach web development with
+      <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+      This is the sample application for the tutorial.
+    </p>
+  </body>
+</html>
+これでテストスイートは greenになるはずです。
+
+リスト 3.29: green
+$ rails test
+3 tests, 6 assertions, 0 failures, 0 errors, 0 skips
+演習
+本演習からサンプルアプリケーションを修正する課題を出していきますが、基本的には演習で修正した結果が今後の開発に影響を与えないよう配慮してあります。なぜこんなことを今説明しているのかというと、今後の演習を進めていくうちに、本書のソースコードと読者のソースコードが少しずつ変わっていく可能性があるからです。しかし、そういった差異から生じる問題を解決していくことは、「熟練」に至るまでの学びには欠かせません (コラム 1.1)。ぜひ次の演習にも果敢に取り組んでみてください。
+
+StaticPagesコントローラのテスト (リスト 3.24) には、いくつか繰り返しがあったことにお気づきでしょうか? 特に「Ruby on Rails Tutorial Sample App」という基本タイトルは、各テストで毎回同じ内容を書いてしまっています。そこで、setupという特別なメソッド (各テストが実行される直前で実行されるメソッド) を使って、この問題を解決したいと思います。まずは、リスト 3.30のテストが green になることを確認してみてください (リスト 3.30では、2.2.2で少し触れたインスタンス変数や文字列の式展開というテクニックを使っています。それぞれ4.4.5と4.2.2で詳しく解説するので、今はわからなくても問題ありません)。
+リスト 3.30: 基本タイトルを使ったStaticPagesコントローラのテスト green
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @base_title = "Ruby on Rails Tutorial Sample App"
+  end
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+    assert_select "title", "Home | #{@base_title}"
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+    assert_select "title", "Help | #{@base_title}"
+  end
+
+  test "should get about" do
+    get static_pages_about_url
+    assert_response :success
+    assert_select "title", "About | #{@base_title}"
+  end
+end
+3.4.3 レイアウトと埋め込みRuby (Refactor)
+この節では、Railsのコントローラとアクションを使って3つの有効なページを生成することでさまざまなことを達成しました。しかしそれらは単純な静的ページであり、またRailsの能力を十分に発揮できていません。しかも、コードが甚だしく重複しています。
+
+ページのタイトルがどれもほぼ同じ (完全にではないが)。
+「Ruby on Rails Tutorial Sample App」という文字が3つのタイトルで繰り返し使われている。
+HTMLの構造全体が各ページで重複している。
+同じコードを繰り返すことはRubyの「DRY」(Don’t Repeat Yourself: 繰り返すべからず) という原則に反します。この節では、繰り返しを追放してコードをDRY (=よく乾かす) にしましょう。最後に3.4.2のテストを実行して、タイトルを壊していないことを確認します。
+
+上の話と一見矛盾するようですが、最初にコードを若干追加して、現在は「ほぼ」同じになっているページのタイトルを「完全に」同じにしておきます。この方が、コードの重複を一括で取り除けるからです。
+
+重複を取り除くテクニックの１つとして、ビューで「埋め込みRuby」(Embedded Ruby) が使えます。Home、Help、Aboutページには可変要素があるので、Railsのprovideメソッドを使ってタイトルをページごとに変更します。それでは、home.html.erbビューのコード内のタイトルに含まれている "Home" という文字を置き換えて、動作を確認してみましょう (リスト 3.31)。
+
+リスト 3.31: タイトルにERBを使ったHomeページのビューgreen
+app/views/static_pages/home.html.erb
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Sample App</h1>
+    <p>
+      This is the home page for the
+      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+      sample application.
+    </p>
+  </body>
+</html>
+リスト 3.31は、ERBと呼ばれている、Rubyの埋め込みコードの最初の例です (これで、HTMLビューのファイルの拡張子が.html.erb.)となっている理由をおわかりいただけたと思います)。ERBはWebページに動的な要素を加えるときに使うテンプレートシステムです13。
+
+<% provide(:title, "Home") %>
+上のコードでは「<% ... %>」という記法が使われており、その中からRailsのprovideメソッドを呼び出しています。メソッドの引数では、"Home"という文字列と:titleというラベルを関連付けています14。そしてタイトルの部分では、上の記法と連携する「<%= ... %>」というよく似た記法を使い、その中でRubyのyieldメソッドを呼び出しています15。このメソッドによって、テンプレートのその部分に実際のタイトルが挿入されます。
+
+<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+この2つのERBの違いは次のとおりです。<% ... %>と書くと、中に書かれたコードを単に実行するだけで何も出力しません。<%= ... %>のように等号を追加すると、中のコードの実行結果がテンプレートのその部分に挿入されます。ERBでビューをこのように書き換えても、ページの表示結果は以前とまったく同じです。タイトルの可変部分がERBによって動的に生成されている点だけが異なります。
+
+3.4.2のテストを実行してこの改修を確認すれば、今度も greenになるはずです。
+
+リスト 3.32: green
+$ rails test
+3 tests, 6 assertions, 0 failures, 0 errors, 0 skips
+続いて、HelpページとAboutページも同様に変更します (リスト 3.33、リスト 3.34)。
+
+リスト 3.33: タイトルにERBを使ったHelpページのビューgreen
+app/views/static_pages/help.html.erb
+<% provide(:title, "Help") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Help</h1>
+    <p>  Get help on the Ruby on Rails Tutorial at the
+      <a href="https://railstutorial.jp/help">Rails Tutorial help
+      section</a>.
+      To get help on this sample app, see the
+      <a href="https://railstutorial.jp/#ebook">
+      <em>Ruby on Rails Tutorial</em> book</a>.
+    </p>
+  </body>
+</html>
+リスト 3.34: タイトルにERBを使ったAboutページのビューgreen
+
+ailsを学ぼう
+第4版 目次
+推薦の言葉
+謝辞
+著者
+著作権とライセンス
+第1章ゼロからデプロイまで
+1.1 はじめに
+1.1.1 前提知識
+1.1.2 この本における取り決め
+1.2 さっそく動かす
+1.2.1 開発環境
+1.2.2 Railsをインストールする
+1.3 最初のアプリケーション
+1.3.1 Bundler
+1.3.2 rails server
+1.3.3 Model-View-Controller (MVC)
+1.3.4 Hello, world!
+1.4 Gitによるバージョン管理
+1.4.1 インストールとセットアップ
+1.4.2 Gitのメリット
+1.4.3 Bitbucket
+1.4.4 ブランチ、編集、コミット、マージ
+1.5 デプロイする
+1.5.1 Herokuのセットアップ
+1.5.2 Herokuにデプロイする (1)
+1.5.3 Herokuにデプロイする (2)
+1.5.4 Herokuコマンド
+1.6 最後に
+1.6.1 本章のまとめ
+第2章Toyアプリケーション
+2.1 アプリケーションの計画
+2.1.1 ユーザーのモデル設計
+2.1.2 マイクロポストのモデル設計
+2.2 Usersリソース
+2.2.1 ユーザーページを探検する
+2.2.2 MVCの挙動
+2.2.3 Usersリソースの欠点
+2.3 Micropostsリソース
+2.3.1 マイクロポストを探検する
+2.3.2 マイクロポストをマイクロにする
+2.3.3 ユーザーはたくさんマイクロポストを持っている
+2.3.4 継承の階層
+2.3.5 アプリケーションをデプロイする
+2.4 最後に
+2.4.1 本章のまとめ
+第3章ほぼ静的なページの作成
+3.1 セットアップ
+3.2 静的ページ
+3.2.1 静的なページの生成
+3.2.2 静的なページの調整
+3.3 テストから始める
+3.3.1 最初のテスト
+3.3.2 Red
+3.3.3 Green
+3.3.4 Refactor
+3.4 少しだけ動的なページ
+3.4.1 タイトルをテストする (Red)
+3.4.2 タイトルを追加する (Green)
+3.4.3 レイアウトと埋め込みRuby (Refactor)
+3.4.4 ルーティングの設定
+3.5 最後に
+3.5.1 本章のまとめ
+3.6 高度なセットアップ
+3.6.1 minitest reporters
+3.6.2 Guardによるテストの自動化
+第4章Rails風味のRuby
+4.1 動機
+4.1.1 組み込みヘルパー
+4.1.2 カスタムヘルパー
+4.2 文字列とメソッド
+4.2.1 コメント
+4.2.2 文字列
+4.2.3 オブジェクトとメッセージ受け渡し
+4.2.4 メソッドの定義
+4.2.5 titleヘルパー、再び
+4.3 他のデータ構造
+4.3.1 配列と範囲演算子
+4.3.2 ブロック
+4.3.3 ハッシュとシンボル
+4.3.4 CSS、再び
+4.4 Rubyにおけるクラス
+4.4.1 コンストラクタ
+4.4.2 クラス継承
+4.4.3 組み込みクラスの変更
+4.4.4 コントローラクラス
+4.4.5 ユーザークラス
+4.5 最後に
+4.5.1 本章のまとめ
+第5章レイアウトを作成する
+5.1 構造を追加する
+5.1.1 ナビゲーション
+5.1.2 BootstrapとカスタムCSS
+5.1.3 パーシャル (partial)
+5.2 Sassとアセットパイプライン
+5.2.1 アセットパイプライン
+5.2.2 素晴らしい構文を備えたスタイルシート
+5.3 レイアウトのリンク
+5.3.1 Contactページ
+5.3.2 RailsのルートURL
+5.3.3 名前付きルート
+5.3.4 リンクのテスト
+5.4 ユーザー登録: 最初のステップ
+5.4.1 Usersコントローラ
+5.4.2 ユーザー登録用URL
+5.5 最後に
+5.5.1 本章のまとめ
+第6章ユーザーのモデルを作成する
+6.1 Userモデル
+6.1.1 データベースの移行
+6.1.2 modelファイル
+6.1.3 ユーザーオブジェクトを作成する
+6.1.4 ユーザーオブジェクトを検索する
+6.1.5 ユーザーオブジェクトを更新する
+6.2 ユーザーを検証する
+6.2.1 有効性を検証する
+6.2.2 存在性を検証する
+6.2.3 長さを検証する
+6.2.4 フォーマットを検証する
+6.2.5 一意性を検証する
+6.3 セキュアなパスワードを追加する
+6.3.1 ハッシュ化されたパスワード
+6.3.2 ユーザーがセキュアなパスワードを持っている
+6.3.3 パスワードの最小文字数
+6.3.4 ユーザーの作成と認証
+6.4 最後に
+6.4.1 本章のまとめ
+第7章ユーザー登録
+7.1 ユーザーを表示する
+7.1.1 デバッグとRails環境
+7.1.2 Usersリソース
+7.1.3 debuggerメソッド
+7.1.4 Gravatar画像とサイドバー
+7.2 ユーザー登録フォーム
+7.2.1 form_forを使用する
+7.2.2 フォームHTML
+7.3 ユーザー登録失敗
+7.3.1 正しいフォーム
+7.3.2 Strong Parameters
+7.3.3 エラーメッセージ
+7.3.4 失敗時のテスト
+7.4 ユーザー登録成功
+7.4.1 登録フォームの完成
+7.4.2 flash
+7.4.3 実際のユーザー登録
+7.4.4 成功時のテスト
+7.5 プロのデプロイ
+7.5.1 本番環境でのSSL
+7.5.2 本番環境用のWebサーバー
+7.5.3 本番環境へのデプロイ
+7.6 最後に
+7.6.1 本章のまとめ
+第8章基本的なログイン機構
+8.1 セッション
+8.1.1 Sessionsコントローラ
+8.1.2 ログインフォーム
+8.1.3 ユーザーの検索と認証
+8.1.4 フラッシュメッセージを表示する
+8.1.5 フラッシュのテスト
+8.2 ログイン
+8.2.1 log_inメソッド
+8.2.2 現在のユーザー
+8.2.3 レイアウトリンクを変更する
+8.2.4 レイアウトの変更をテストする
+8.2.5 ユーザー登録時にログイン
+8.3 ログアウト
+8.4 最後に
+8.4.1 本章のまとめ
+第9章発展的なログイン機構
+9.1 Remember me 機能
+9.1.1 記憶トークンと暗号化
+9.1.2 ログイン状態の保持
+9.1.3 ユーザーを忘れる
+9.1.4 ２つの目立たないバグ
+9.2 [Remember me] チェックボックス
+9.3 [Remember me] のテスト
+9.3.1 [Remember me] ボックスをテストする
+9.3.2 [Remember me] をテストする
+9.4 最後に
+9.4.1 本章のまとめ
+第10章ユーザーの更新・表示・削除
+10.1 ユーザーを更新する
+10.1.1 編集フォーム
+10.1.2 編集の失敗
+10.1.3 編集失敗時のテスト
+10.1.4 TDDで編集を成功させる
+10.2 認可
+10.2.1 ユーザーにログインを要求する
+10.2.2 正しいユーザーを要求する
+10.2.3 フレンドリーフォワーディング
+10.3 すべてのユーザーを表示する
+10.3.1 ユーザーの一覧ページ
+10.3.2 サンプルのユーザー
+10.3.3 ページネーション
+10.3.4 ユーザー一覧のテスト
+10.3.5 パーシャルのリファクタリング
+10.4 ユーザーを削除する
+10.4.1 管理ユーザー
+10.4.2 destroyアクション
+10.4.3 ユーザー削除のテスト
+10.5 最後に
+10.5.1 本章のまとめ
+第11章アカウントの有効化
+11.1 AccountActivationsリソース
+11.1.1 AccountActivationsコントローラ
+11.1.2 AccountActivationのデータモデル
+11.2 アカウント有効化のメール送信
+11.2.1 送信メールのテンプレート
+11.2.2 送信メールのプレビュー
+11.2.3 送信メールのテスト
+11.2.4 ユーザーのcreateアクションを更新
+11.3 アカウントを有効化する
+11.3.1 authenticated?メソッドの抽象化
+11.3.2 editアクションで有効化
+11.3.3 有効化のテストとリファクタリング
+11.4 本番環境でのメール送信
+11.5 最後に
+11.5.1 本章のまとめ
+第12章パスワードの再設定
+12.1 PasswordResetsリソース
+12.1.1 PasswordResetsコントローラ
+12.1.2 新しいパスワードの設定
+12.1.3 createアクションでパスワード再設定
+12.2 パスワード再設定のメール送信
+12.2.1 パスワード再設定のメールとテンプレート
+12.2.2 送信メールのテスト
+12.3 パスワードを再設定する
+12.3.1 editアクションで再設定
+12.3.2 パスワードを更新する
+12.3.3 パスワードの再設定をテストする
+12.4 本番環境でのメール送信 (再掲)
+12.5 最後に
+12.5.1 本章のまとめ
+12.6 証明: 期限切れの比較
+第13章ユーザーのマイクロポスト
+13.1 Micropostモデル
+13.1.1 基本的なモデル
+13.1.2 Micropostのバリデーション
+13.1.3 User/Micropostの関連付け
+13.1.4 マイクロポストを改良する
+13.2 マイクロポストを表示する
+13.2.1 マイクロポストの描画
+13.2.2 マイクロポストのサンプル
+13.2.3 プロフィール画面のマイクロポストをテストする
+13.3 マイクロポストを操作する
+13.3.1 マイクロポストのアクセス制御
+13.3.2 マイクロポストを作成する
+13.3.3 フィードの原型
+13.3.4 マイクロポストを削除する
+13.3.5 フィード画面のマイクロポストをテストする
+13.4 マイクロポストの画像投稿
+13.4.1 基本的な画像アップロード
+13.4.2 画像の検証
+13.4.3 画像のリサイズ
+13.4.4 本番環境での画像アップロード
+13.5 最後に
+13.5.1 本章のまとめ
+第14章ユーザーをフォローする
+14.1 Relationshipモデル
+14.1.1 データモデルの問題 (および解決策)
+14.1.2 User/Relationshipの関連付け
+14.1.3 Relationshipのバリデーション
+14.1.4 フォローしているユーザー
+14.1.5 フォロワー
+14.2 [Follow] のWebインターフェイス
+14.2.1 フォローのサンプルデータ
+14.2.2 統計と [Follow] フォーム
+14.2.3 [Following] と [Followers] ページ
+14.2.4 [Follow] ボタン (基本編)
+14.2.5 [Follow] ボタン (Ajax編)
+14.2.6 フォローをテストする
+14.3 ステータスフィード
+14.3.1 動機と計画
+14.3.2 フィードを初めて実装する
+14.3.3 サブセレクト
+14.4 最後に
+14.4.1 サンプルアプリケーションの機能を拡張する
+14.4.2 読み物ガイド
+14.4.3 本章のまとめ
+14.4.4 訳者あとがき
+推薦の言葉
+私が前にいた会社 (CD Baby) は、かなり早い段階でRuby on Railsに乗り換えたのですが、またPHPに戻ってしまいました (詳細は私の名前をGoogleで検索してみてください)。そんな私ですが、Michael Hartl 氏の本を強く勧められたので、その本を使ってもう一度試してみた結果、今度は無事に Rails に乗り換えることができました。それがこの Ruby on Rails チュートリアルという本です。
+
+私は多くの Rails 関連の本を参考にしてきましたが、真の決定版と呼べるものは本書をおいて他にありません。本書では、あらゆる手順が「Rails 流」で行われています。最初のうちは慣れるまでに時間がかかりましたが、この本を終えた今、ついにこれこそが自然な方式だと感じられるまでになりました。また、本書は Rails 関連の本の中で唯一、多くのプロが推奨するテスト駆動開発 (TDD: Test Driven Development) を、全編を通して実践しています。実例を使ってここまで分かりやすく解説された本は、本書が初めてでしょう。極めつけは、Git や GitHub、Heroku の実例に含めている点です。このような、実際の開発現場で使わているツールもチュートリアルに含まれているため、読者は、まるで実際のプロジェクトの開発プロセスを体験しているかのような感覚が得られるはずです。それでいて、それぞれの実例が独立したセクションになっているのではなく、そのどれもがチュートリアルの内容と見事に一体化しています。
+
+本書は、筋道だった一本道の物語のようになっています。私自身、章の終わりにある練習問題もやりながら、この Rails チュートリアルを3日間かけて一気に読破しました1。最初から最後まで、途中を飛ばさずにやるのが一番効果的で有益な読み方です。ぜひやってみてください。
+
+それでは、楽しんでお読みください！
+
+Derek Sivers (sivers.org)
+CD Baby 創業者
+
+(訳注: たった3分のTEDの動画「社会運動をどうやって起こすか」を観たことがある方もいるのではないでしょうか。その方からの推薦の言葉です。)
+
+謝辞
+Ruby on Rails チュートリアルは、私の以前の著書「RailsSpace」と、その時の共著者 Aurelius Prochazka から多くを参考にさせてもらっています。Aure には、協力と本書への支援も含め、感謝したいと思います。また、RailsSpace と Rails チュートリアルの編集を担当した Debra Williams Cauley 氏にも謝意を表したく思います。彼女が野球の試合に連れて行ってくれる限り、私は本を書き続けるでしょう。
+
+私にインスピレーションと知識を与えてくれた Rubyist の方々にも感謝したいと思います： David Heinemeier Hansson, Yehuda Katz, Carl Lerche, Jeremy Kemper, Xavier Noria, Ryan Bates, Geoffrey Grosenbach, Peter Cooper, Matt Aimonetti, Mark Bates, Gregg Pollack, Wayne E. Seguin, Amy Hoy, Dave Chelimsky, Pat Maddox, Tom Preston-Werner, Chris Wanstrath, Chad Fowler, Josh Susser, Obie Fernandez, Ian McFarland, Steven Bristol, Pratik Naik, Sarah Mei, Sarah Allen, Wolfram Arnold, Alex Chaffee, Giles Bowkett, Evan Dorn, Long Nguyen, James Lindenbaum, Adam Wiggins, Tikhon Bernstam, Ron Evans, Wyatt Greene, Miles Forrest, Sandi Metz, Ryan Davis, Aaron Patterson, Pivotal Labs の方々、Heroku の方々、thoughtbot の方々、そして GitHub の方々、ありがとうございました。最後に、ここに書ききれないほど多くの読者からバグ報告や提案を頂きました。ご協力いただいた皆様のおかげで、本書の完成度をとことんまで高めることができました。
+
+丁寧なレビュー、技術的なフィードバック、そして役立つ提案をしてくれた Andrew Thai に感謝します。また、Learn Enough to Be Dangerous の共同創業者である Nick Merwin と Lee Donahoe、日々のチュートリアルの制作をサポートしてくれてありがとう。
+
+最後に、たくさんの読者の皆さん、そして、ここに挙げきれないほど多いコントリビューターのみんな、バグ報告や提案をしてくれてありがとう。彼ら/彼女らの多くの手助けに、最高の感謝を。
+
+著者
+マイケル・ハートル (Michael Hartl) はRuby on Rails Tutorial という、Web 開発を学ぶときによく参考にされる本の著者です。 また、Learn Enough to Be Dangerous (learnenough.com) 教育系ウェブサイトの創業者でもあります。 以前は、(今ではすっかり古くなってしまいましたが)「RailsSpace」という本の執筆および開発に携わったり、また、 一時人気を博した Ruby on Rails ベースのSNSプラットフォーム「Insoshi」の開発にも携わっていました。 2011年には、Rails コミュニティへの高い貢献が認められて、Ruby Hero Award を受賞しました。
+
+ハーバード大学卒業後、カリフォルニア工科大学で物理学博士号を取得。シリコンバレーの有名な起業プログラム Y Combinator の卒業生でもあります。
+
+著作権とライセンス
+Ruby on Rails チュートリアル: 実例を使って Rails を学ぼう Copyright © 2016 by Michael Hartl (最終更新日: 2016/10/24 23:37:56 PT)
+
+Ruby on Rails チュートリアルで掲載しているすべてのソースコードは、MIT ライセンスおよびBeerware ライセンスの元で提供されています。(訳注: MITライセンスの利用方法については @y_catch さんの記事「MITライセンスが適用されたコードを利用するには 」をご参照ください）
+
+(注: 「すべてのソースコード」とは、Railsチュートリアル内で題材としている「Railsアプリケーションのソースコード」を指します。「Railsチュートリアル」という教材は上記ライセンスで提供されていないのでご注意ください。商用でRailsチュートリアルをご利用する場合はお問い合わせページからご連絡ください。)
+
+The MIT License
+
+Copyright (c) 2016 Michael Hartl
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+THE BEERWARE LICENSE (Revision 42)
+
+Michael Hartl wrote this code. As long as you retain
+this notice you can do whatever you want with this stuff.
+If we meet some day, and you think this stuff is worth it,
+you can buy me a beer in return.
+«前の章次の章»
+3日間で読破できる人は例外です! 実際には数週間〜数ヶ月をかけて読むのが一般的です。 ↑
+第3章
+ほぼ静的なページの作成
+本章から、本格的なサンプルアプリケーションの開発を進めていきます。残りのチュートリアルでは、このアプリケーションを例題として扱って学習していくことになります。本書を通して開発するアプリケーションは、最終的にはユーザーやマイクロポスト、ログイン/ログアウトなどの認証機能を持ちますが、まずは簡単なトピックである「静的なページの作成」から始めます。非常に単純なページではありますが、静的なページを自分の手で作成することは良い経験になり、多くの示唆も得られます。私達がこれから開発するアプリケーションにとって最適なスタート地点といえるでしょう。
+
+Railsはデータベースと連携して動的なWebサイトを開発するように設計されていますが、HTMLファイルだけで構成されている静的なページを作ることもできます。実際、Railsであえて静的なページを使っておき、後からほんの少し動的なコンテンツを追加することもできます。本章では、このような静的なページの作成について学んでいきます。本章ではそれと平行して、近年のプログラミングで不可欠となっている「自動化テスト」の雰囲気を掴んでいただきます。自動化テストを作成することで、コードが正しく動いていることが裏付けられます。さらに、良いテストを書くことで、自信をもってリファクタリングを行うことができます。例えばフォームの振る舞いを変更せずに、フォーム内で使われているメソッドを書き換えたいときに有用です。
+
+3.1 セットアップ
+第2章と同様に、新しいRailsプロジェクトを作成するところから始めます。今回はsample_appという名前にします (リスト 3.1)1。
+
+リスト 3.1: サンプルアプリケーションを生成する green
+$ cd ~/environment
+$ rails _5.1.6_ new sample_app
+$ cd sample_app/
+(2.1でも説明したとおり、クラウドIDEをご利用の方は、このプロジェクトをこれまでの2つの章で作成したプロジェクトと同じワークスペースに置くことができます。このプロジェクトで特に新しいワークスペースを作成する必要はありません)。
+
+注: 本チュートリアルを全てやり遂げた時の完成版サンプルアプリケーションをBitbucketに置いておきました2。もし途中で躓いてしまったときは参考にしてみてください。
+
+次に、2.1と同じように、テキストエディタを使ってGemfileに必要なgemを書き足していきます。リスト 3.2は、リスト 1.5やリスト 2.1と基本的に同じですが、testグループ内のgemだけが少し違っています。この変更でテスト用オプションを設定していますが、少し高度なので細かな解説は3.6に回します。今はあまり気にしないで大丈夫です。5.3.4. (注: もしサンプルアプリケーションの開発で必要になるgemをすべて知りたい場合は、リスト 13.72を参照してください。これが最終的なGemfileになります)。
+
+リスト 3.2: サンプルアプリケーション用のGemfile
+source 'https://rubygems.org'
+
+gem 'rails',        '5.1.6'
+gem 'puma',         '3.9.1'
+gem 'sass-rails',   '5.0.6'
+gem 'uglifier',     '3.2.0'
+gem 'coffee-rails', '4.2.2'
+gem 'jquery-rails', '4.3.1'
+gem 'turbolinks',   '5.0.1'
+gem 'jbuilder',     '2.7.0'
+
+group :development, :test do
+  gem 'sqlite3', '1.3.13'
+  gem 'byebug',  '9.0.6', platform: :mri
+end
+
+group :development do
+  gem 'web-console',           '3.5.1'
+  gem 'listen',                '3.1.5'
+  gem 'spring',                '2.0.2'
+  gem 'spring-watcher-listen', '2.0.1'
+end
+
+group :test do
+  gem 'rails-controller-testing', '1.0.2'
+  gem 'minitest',                 '5.10.3'
+  gem 'minitest-reporters',       '1.1.14'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
+end
+
+group :production do
+  gem 'pg', '0.20.0'
+end
+
+# Windows環境ではtzinfo-dataというgemを含める必要があります
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+前の2つの章と同様にbundle installを実行して、Gemfileで指定したgemのインストールをします。ただし、--without productionオプションを使って、production環境でしか使わないgemはインストールしないようにしておきます3。
+
+$ bundle install --without production
+上のオプションを指定することで、PostgreSQL用のpg gemをdevelopment環境にインストールせず、代わりにSQLiteがdevelopment環境とtest環境で使われるようになります。Herokuでは、development環境とproduction環境とで異なるデータベースを使うことを非推奨としていますが、幸いにもこのサンプルアプリケーションでは両者の違いは生じません。また、SQLiteの方がPostgreSQLよりもローカルでのインストールや設定がずっと楽なので、今回は異なるデータベースを使うことにします4。もしGemfileで指定されているのと異なるバージョンのgem (Rails自身のgemなど) をインストールしていた場合は、bundle updateを実行してgemを更新 (update) し、gemのバージョンを合わせておくとよいでしょう。
+
+$ bundle update
+ここまで進めたら、後はGitリポジトリを初期化するだけです。
+
+$ git init
+$ git add -A
+$ git commit -m "Initialize repository"
+最初のアプリケーションのときと同様に、まずはアプリケーションのルートディレクトリにあるREADME.mdファイルを更新して、具体的な作業内容をわかりやすく記入しておくことをおすすめします (リスト 3.3)。例えば次のように、READMEにはこのアプリケーションを使ってみる方法を記載してみましょう5 (第6章まではrails db:migrateが必要になることはありませんが、いずれ必要になるので今のうちに含めてしまいましょう)。
+
+リスト 3.3: サンプルアプリケーション向けに書き換えたREADME
+README.md
+# Ruby on Rails チュートリアルのサンプルアプリケーション
+
+これは、次の教材で作られたサンプルアプリケーションです。   
+[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
+[Michael Hartl](http://www.michaelhartl.com/) 著
+
+## ライセンス
+
+[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
+ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
+詳細は [LICENSE.md](LICENSE.md) をご覧ください。
+
+## 使い方
+
+このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
+その後、次のコマンドで必要になる RubyGems をインストールします。
+
+```
+$ bundle install --without production
+```
+
+その後、データベースへのマイグレーションを実行します。
+
+```
+$ rails db:migrate
+```
+
+最後に、テストを実行してうまく動いているかどうか確認してください。
+
+```
+$ rails test
+```
+
+テストが無事に通ったら、Railsサーバーを立ち上げる準備が整っているはずです。
+
+```
+$ rails server
+```
+
+詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
+を参考にしてください。
+書き終わったら、この変更をコミットします。
+
+$ git commit -am "Improve the README"
+1.4.4でgit commit -a -m "Message"というGitコマンドを実行したことを思い出してください。あのときは “すべてを変更” (-a) オプションとコミットメッセージを追加するオプション (-m) を使いました。上で実行したコマンドで示したように、実はこれらの2つのオプションを1つにまとめてgit commit -am "Message"と実行することができます。
+
+本書では今後もこのサンプルアプリケーションを使い続けるので、Bitbucket上にリポジトリを作成してpushしておくとよいでしょう。
+
+$ git remote add origin git@bitbucket.org:ユーザー名/sample_app.git
+$ git push -u origin --all     # リポジトリやその参照先もすべてプッシュする
+後でproduction環境にプッシュするときに悩まずに済むよう、アプリをなるべく早い段階でHerokuにデプロイしておくとよいでしょう。第1章や第2章のときと同様に、リスト 3.4やリスト 3.5にある「hello, world」の手順に従って進めてみましょう。
+
+(RailsのデフォルトのページはHeroku上ではうまく表示されない仕様になっています。このため、次のような変更を加えないとデプロイが成功したかどうかが分かりづらい、というのが本当の理由です。)
+
+リスト 3.4: helloアクションをApplicationコントローラーに追加する
+app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+
+  def hello
+    render html: "hello, world!"
+  end
+end
+リスト 3.5: ルートルーティングを設定する
+config/routes.rb
+Rails.application.routes.draw do
+  root 'application#hello'
+end
+終わったら、次のように変更をコミットしてHerokuにプッシュします。
+
+$ git commit -am "Add hello"
+$ git push
+$ heroku create
+$ git push heroku master
+1.5のときと同じように警告メッセージが表示されることがありますが、無視して構いません。この警告は7.5で解決する予定です。これで、HerokuアプリのURL以外は、図 1.23のとおりに表示されるはずです。
+
+この後も、本チュートリアルを進めながらアプリケーションをこまめにプッシュ/デプロイすることをおすすめします。こうすることでリモートバックアップにもなり、production環境でのエラーを早めに確認することもできます。なお、Herokuに展開するときにエラーが発生した場合は、次のコマンドを実行して本番環境のログを取得してください。このログは、問題を特定するときに役立ちます。
+
+$ heroku logs
+注: 今後Herokuで何らかの本番アプリケーションを運用する予定があるなら、7.5のproduction用Webサーバーの設定に必ず従ってください。
+
+演習
+BitbucketがMarkdown記法のREADME (リスト 3.3) をHTMLとして正しく描画しているか、確認してみてください。
+本番環境 (Heroku) のルートURLにアクセスして、デプロイが成功したかどうか確かめてみてください。
+3.2 静的ページ
+3.1の準備がすべて完了したら、いよいよサンプルアプリケーションの開発に取りかかりましょう。この節では、まずはRailsのアクションやビューを使って静的なHTMLのみのページを作成し、その後、静的なページを動的なページに作り変えていきます6。Railsのアクションは、コントローラ (1.3.3で説明したMVCの「C」) の中に置きます。また、コントローラ内の各アクションは目的に沿って互いに関連した操作 (作成や削除など) を行います。コントローラについては第2章でも簡単に触れましたが、第6章で説明するRESTアーキテクチャを読むと理解が深まります。一言でまとめると、コントローラとは (基本的に動的な) Webページの集合を束ねるコンテナのことです。現在どのディレクトリで作業しているかがわからなくなった場合は、1.3 (図 1.7)を再度参照して、Railsのディレクトリ構造を確認してください。この節では、主にapp/controllersディレクトリやapp/viewsディレクトリ内で作業を進めます
+
+1.4.4で学んだことを思い出しましょう。Gitを使う場合は、masterブランチでずっと作業するのではなく、その都度トピックブランチを作成して作業するのがよい習慣です。Gitでバージョン管理を行っているのであれば、次のコマンドを実行して、静的なページ用のトピックブランチをチェックアウトしましょう。
+
+$ git checkout -b static-pages
+3.2.1 静的なページの生成
+静的なページの作成は、第2章でscaffold生成に使った generate スクリプトで、コントローラを生成することから始めます。このコントローラは静的なページを扱うためにしか使わないので、コントローラ名を「Static Pages」に決め、表記をキャメルケースのStaticPagesにします。続いて、Homeページ、Helpページ、Aboutページに使うアクションもそれぞれ作成することにし、アクション名はすべて小文字のhome、help、aboutにします。generateスクリプトではアクション名をまとめて指定することもできるので、コマンドラインでHomeページとHelpページ用のアクションもまとめて生成することにします。なお、Aboutページだけは学習のため、あえてコマンドラインでは作成せず、3.3で手動で追加することにします。これらの要素を盛り込んだStaticPagesコントローラ生成コマンドと実行結果をリスト 3.6に示します。
+
+リスト 3.6: StaticPagesコントローラを生成する
+$ rails generate controller StaticPages home help
+      create  app/controllers/static_pages_controller.rb
+       route  get 'static_pages/help'
+       route  get 'static_pages/home'
+      invoke  erb
+      create    app/views/static_pages
+      create    app/views/static_pages/home.html.erb
+      create    app/views/static_pages/help.html.erb
+      invoke  test_unit
+      create    test/controllers/static_pages_controller_test.rb
+      invoke  helper
+      create    app/helpers/static_pages_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/static_pages.coffee
+      invoke    scss
+      create      app/assets/stylesheets/static_pages.scss
+追伸: rails gはrails generateコマンドの短縮形であり、Railsでサポートされている多数の短縮形の１つです (表 3.1)。本チュートリアルではわかりやすさを重んじているため、こうしたコマンドは短縮せずに表記していますが、現実のRails開発者はほぼ間違いなく表 3.1の短縮形を常用しています7。
+
+完全なコマンド  短縮形
+$ rails server  $ rails s
+$ rails console $ rails c
+$ rails generate  $ rails g
+$ rails test  $ rails t
+$ bundle install  $ bundle
+表 3.1: Railsで使える短縮形の例
+次に進む前に、StaticPagesコントローラファイルをGitリポジトリに追加しておきましょう。
+
+$ git add -A
+$ git commit -m "Add a Static Pages controller"
+$ git push -u origin static-pages
+最後のコマンドでは、static-pagesトピックブランチをBitbucketにプッシュしています。以後は、単に次のコマンドを実行するだけで同じプッシュが行われるようになります。
+
+$ git push
+上のコミット〜プッシュの流れは、著者が実際の開発でよく使っていたパターンに基づいていますが、ここから先は途中でこのような指示をいちいち書くことはしませんので、各自こまめにプッシュするようにしてください。
+
+リスト 3.6では、コントローラ名をキャメルケース (単語の頭文字を大文字にしてつなぎ合わせた名前) で渡していることに注目してください。こうすると、StaticPagesコントローラ名をスネークケース (単語間にアンダースコアを加えて繋ぎ合わせた名前) にしたファイルstatic_pages_controller.rbを自動的に生成します。ただし、上のような命名は単なる慣習に過ぎません。実際、コマンドライン上で次のようなスネークケースのコントローラ名を入力しても、
+
+$ rails generate controller static_pages ...
+先ほどと同様にstatic_pages_controller.rbというコントローラが生成されます。これは、Rubyがクラス名にキャメルケースを使う慣習があり (詳細は4.4で説明します)、また、キャメルケースの名前を使うことが好まれているためです。これらの慣習に必ず従わなければいけないということではありません。(同様にRubyでは、ファイル名をスネークケースで記述する慣習があります。このためRailsのgenerateスクリプトでは、underscoreメソッドを使ってキャメルケースをスネークケースに変換しています。)
+
+ところで、もし自動生成に失敗するようなことがあれば、それは元に戻す処理を学ぶ良い機会にもなりますね。コラム 3.1で元に戻す方法を紹介しているので、もし機会があれば実際に試してみましょう。
+
+コラム 3.1. 元に戻す方法
+どれほど十分に気を付けていたとしても、Railsアプリケーションの開発中に何か失敗してしまうことはありえます。ありがたいことに、Railsにはそのような失敗をカバーする機能がいくつもあります。
+
+一般的なシナリオの1つは、生成したコードを元に戻したい場合です。例えばコントローラを生成した後で、もっといいコントローラ名を思い付き、生成したコードを削除したくなった場合などです。リスト 3.6のように、Railsはコントローラ以外にも関連ファイルを大量に生成するので、生成されたコントローラファイルを削除するだけでは元に戻りません。自動生成されたコードを元に戻すためには、新規作成されたファイルを削除するだけではなく、既存のファイルに挿入されたコードも削除する必要があります (実際、2.2や2.3でも説明したように、rails generateを実行するとルーティングのroutes.rbファイルも自動的に変更されるので、これも元に戻さなくてはなりません)。このようなときは、「generate」という言葉に因んで、rails destroyというコマンドを実行することで元に戻すことができます。例えば次の2つのコマンドは、自動生成と、それに対応する取り消し処理の例です。
+
+  $ rails generate controller StaticPages home help
+  $ rails destroy  controller StaticPages home help
+なお第6章でも、次のようにモデルを自動生成する方法を紹介します。
+
+  $ rails generate model User name:string email:string
+モデルの自動生成についても、同様の方法で元に戻すことができます。
+
+  $ rails destroy model User
+(上のコマンドからわかるように、モデル名以外の引数は不要です。その理由については第6章で説明します)。
+
+また、第2章でも簡単に紹介しましたが、マイグレーションの変更を元に戻す方法も用意されています。詳細は第6章で説明しますが、簡単に紹介すると、まずdb:migrateでデータベースのマイグレーションを変更します。
+
+  $ rails db:migrate
+元に戻したいときは、db:rollbackで1つ前の状態に戻します。
+
+  $ rails db:rollback
+最初の状態に戻したいときは、VERSION=0オプションを使います。
+
+  $ rails db:migrate VERSION=0
+既にお気付きの方もいると思いますが、マイグレーションは逐次的に実行され、それぞれのマイグレーションに対してバージョン番号が付与されます。したがって、上記の0を別の数字に置き換えることによって、指定したバージョンの状態に戻すことができます。
+
+開発中に袋小路に迷い込んでしまった場合でも、これらの機能を使えば元の状態を復元できます。
+
+リスト 3.6のようにStaticPagesコントローラを生成すると、(config/routes.rb)ファイルが自動的に更新されます (1.3.4のときと同様です)。このルーティングファイルはルーターの実装を受け持ち (図 2.11)、URLとWebページの対応関係を定義します。このルーティングファイルはRailsのconfigディレクトリの下に置かれます。このディレクトリには、Railsの設定ファイルがまとめて置かれます (図 3.1)。
+
+images/figures/config_directory_4th_edition
+図 3.1: サンプルアプリケーションのconfigディレクトリの内容
+先ほどリスト 3.6のようにhome アクションと helpアクションを生成したので、routesファイルにはそれぞれのアクションで使われるルールが定義されています (リスト 3.7)。
+
+リスト 3.7: StaticPagesコントローラ内のhomeアクションとhelpアクションで使うルーティング
+config/routes.rb
+Rails.application.routes.draw do
+  get  'static_pages/home'
+  get  'static_pages/help'
+  root 'application#hello'
+end
+ここで次のルールに注目してみましょう。
+
+get 'static_pages/home'
+このルールは、/static_pages/homeというURLに対するリクエストを、StaticPagesコントローラのhomeアクションと結びつけています。今回はgetと書かれているため、GETリクエストを受け取ったときに対応するアクションを結びつけています。なお、ここでいうGETリクエストとは、HTTP (HyperText Transfer Protocol) が対応しているメソッドの1つです (コラム 3.2)。
+
+今回の場合は、StaticPagesコントローラ内にhomeアクションを追加したので、/static_pages/homeにアクセスすることでページを取得 (GET) できるようになりました。結果を確認するには、1.3.2に従って次のようにRailsのdevelopmentサーバーを起動します。
+
+$ rails server
+Railsサーバーが立ち上がったら、/static_pages/homeにアクセスして結果を表示します (図 3.2)。
+
+images/figures/raw_home_view_3rd_edition
+図 3.2: /static_pages/homeにアクセスした結果
+コラム 3.2. GETやその他のHTTPメソッドについて
+HTTP (HyperText Transfer Protocol) には4つの基本的な操作があり、それぞれGET、POST、PATCH、DELETEという4つの動詞に対応づけられています。クライアント (例えばFirefoxやSafariなどのWebブラウザ) とサーバー (ApacheやNginxなどのWebサーバー) は、上で述べた4つの基本操作を互いに認識できるようになっています (ローカル環境でRailsアプリケーションを開発しているときは、クライアントとサーバーが同じコンピュータ上で動いていますが、一般的には、それぞれ別のコンピュータで動作しているという点を理解しておいてください)。Railsを含む多くのWebフレームワークは、HTTPの各操作を発展させたRESTアーキテクチャの影響を受けています。第2章でも簡単に触れましたが、第7章ではより深い内容について学びます。
+
+GETは最も頻繁に使われるHTTPリクエストで、主にWeb上のデータを読み取る (get) ときに使われます。「ページを取得する (get a page)」という意味のとおり、ブラウザはhttp://www.google.com/やhttp://www.wikipedia.org/などのWebサイトを開くたびにGETリクエストをサイトに送信します。POSTは、GETの次によく使用されるリクエストで、ページ上のフォームに入力した値を、ブラウザから送信する時に使われます。例えばRailsアプリケーションでは、POSTリクエストは何かを作成するときによく使われます (なお本来のHTTPでは、POSTを更新に使ってもよいとしています)。例えばユーザー登録フォームで新しいユーザーを作成するときは、POSTリクエストを送信します。他にも、PATCHと DELETEという2つの操作があり、それぞれサーバー上の何かを更新したり削除したりするときに使われます。これら2つの操作は、GETやPOSTほどは使われていません。これは、ブラウザがPATCHとDELETEをネイティブでは送信しないからです。しかし、Ruby on Railsなどの多くのWebフレームワークは、ブラウザがこれらの操作のリクエストを送信しているかのように見せかける技術 (偽装) を駆使して、PATCHとDELETEという操作を実現しています。結果として、Railsはこの4つのHTTPリクエスト (GET・POST・PATCH・DELETE) を全てサポートできるようになりました。
+
+このページがどのようにして表示されるのかを理解するために、まずはテキストエディタでStaticPagesコントローラを開いてみましょう。リスト 3.8のような内容になっているはずです。ここで、第2章のUsersコントローラやMicropostsコントローラとは異なり、StaticPagesコントローラは一般的なRESTアクションに対応していないことに注意してください。これは、静的なページの集合に対しては、適切なアクションと言えます。言い換えると、RESTアーキテクチャは、あらゆる問題に対して最適な解決方法であるとは限らないということです。
+
+リスト 3.8: リスト 3.6で生成されるStaticPagesコントローラ
+app/controllers/static_pages_controller.rb
+class StaticPagesController < ApplicationController
+  def home
+  end
+
+  def help
+  end
+end
+リスト 3.8のclassというキーワードから、static_pages_controller.rbはStaticPagesControllerというクラスを定義していることが分かります。このようなクラスは、メソッド (関数とも呼ばれます) をまとめるときに便利な手法です。今回の例ではdefというキーワードを使って、homeアクションやhelpアクションを定義しています。2.3.4で説明したように、山カッコ<は、StaticPagesControllerがApplicationControllerというRailsのクラスを継承していることを示しています。この後も説明しますが、今回作成したページにはRails特有の機能が多数使われています (クラスや継承については4.4で詳しく解説します)。
+
+今回のStaticPagesコントローラにあるメソッドは、次のようにどちらも最初は空になっています。
+
+def home
+end
+
+def help
+end
+純粋なRuby言語であれば、これらのメソッドは何も実行しません。しかし、Railsでは動作が異なります。StaticPagesControllerはRubyのクラスですが、ApplicationControllerクラスを継承しているため、StaticPagesControllerのメソッドは (たとえ何も書かれていなくても) Rails特有の振る舞いをします。具体的には、/static_pages/homeというURLにアクセスすると、RailsはStaticPagesコントローラを参照し、homeアクションに記述されているコードを実行します。その後、そのアクションに対応するビュー (1.3.3で説明したMVCのVに相当) を出力します。今回の場合、homeアクションが空になっているので、/static_pages/homeにアクセスしても、単に対応するビューが出力されるだけです。では、ビューはどのように出力されるのでしょうか。また、どのビューが表示されるのでしょうか。
+
+リスト 3.6をもう一度注意深く読んでみると、アクションとビューの関係について推測がつくと思いますが、homeアクションはhome.html.erbというビューに対応しています。.erbの詳細については3.4で説明しますが、ファイル名に.htmlが含まれていることからわかるように、基本的にはHTMLと同じような構造になっています (3.9)。
+
+リスト 3.9: Homeページ用に生成されたビュー
+app/views/static_pages/home.html.erb
+<h1>StaticPages#home</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+helpアクションに対応するビューも、上のコードと似ています (リスト 3.10)。
+
+リスト 3.10: Helpページ用に生成されたビュー
+app/views/static_pages/help.html.erb
+<h1>StaticPages#help</h1>
+<p>Find me in app/views/static_pages/help.html.erb</p>
+どちらのビューも単なるプレースホルダになっています。トップレベルの見出しがh1タグの中にあり、関連するファイルへの絶対パスがpタグの中に書かれています。
+
+演習
+Fooというコントローラを生成し、その中にbarとbazアクションを追加してみてください。
+コラム 3.1で紹介したテクニックを駆使して、Fooコントローラとそれに関連するアクションを削除してみてください。
+3.2.2 静的なページの調整
+3.4からは (ほんの少しだけ) 動的なコンテンツを追加しますが、リスト 3.9やリスト 3.10で見てきたように、重要なのは「Railsのビューの中には静的なHTMLがある」という点です。これは、Railsの知識が無くてもHomeページやHelpページを修正できることを意味しています。次のリスト 3.11とリスト 3.12がその一例です。
+
+リスト 3.11: HomeページのHTMLを修正する
+app/views/static_pages/home.html.erb
+<h1>Sample App</h1>
+<p>
+  This is the home page for the
+  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+  sample application.
+</p>
+リスト 3.12: HelpページのHTMLを修正する
+app/views/static_pages/help.html.erb
+<h1>Help</h1>
+<p>
+  Get help on the Ruby on Rails Tutorial at the
+  <a href="https://railstutorial.jp/help">Rails Tutorial help page</a>.
+  To get help on this sample app, see the
+  <a href="https://railstutorial.jp/#ebook"><em>Ruby on Rails Tutorial</em>
+  book</a>.
+</p>
+リスト 3.11とリスト 3.12の結果をそれぞれ図 3.3と図 3.4に示します。
+
+images/figures/custom_home_page
+図 3.3: 修正されたHomeページ
+images/figures/custom_help_page_4th_edition
+図 3.4: 修正されたHelpページ
+3.3 テストから始める
+3.2.2でサンプルアプリのHomeページとHelpページを作成して中身も書き加えたので、今度はAboutページを同様に追加します。何らかの変更を行う際には、常に「自動化テスト」を作成して、機能が正しく実装されたことを確認する習慣をぜひ身に付けましょう。アプリケーションを開発しながらテストスイート (Test Suite) をみっちり作成しておけば、いざというときのセーフティネットにもなり、それ自体がアプリケーションのソースコードの「実行可能なドキュメント」にもなります。テストを作成するということは、その分コードを余分に書くことになりますが、正しく行えば、むしろテストがないときよりも確実に開発速度がアップします。テストが揃っていれば、バグを追うために余分な時間を使わずに済むためです。そんなふうにうまくいくとは信じられない人もいるかもしれませんが、一度でもテスト作成が上達すれば間違いなくこのとおりになります。だからこそ、テスト作成の習慣をできるだけ早いうちに身につけることが重要なのです。
+
+テストが重要であるという点ではRails開発者の意見はほぼ一致していますが、細かい点では異論が生じているのも確かです。特に、テスト駆動開発 (TDD)8 (テストの手法の１つ: 最初に「正しいコードがないと失敗するテスト」を書き、次に本編のコードを書いてそのテストがパスするようにする) の是非については、当分議論が終わりそうにありません。筆者も悩んだ末、Ruby on Rails チュートリアルではこの点について「とにかく〜すべし」的な原理主義を避けることにしました。テストに関しては、原則として手軽かつ直感的なアプローチを採用し、必要に応じてTDDに切り替えるようにしています (コラム 3.3)。
+
+コラム 3.3. 結局テストはいつ行えばよいのか
+それではいつ、どんなふうにテストを行えばよいのでしょうか。この点を理解するために、テストを行う目的をもう一度確認してみましょう。著者は、テストには次の3つのメリットがあると考えます。
+
+テストが揃っていれば、機能停止に陥るような回帰バグ (Regression Bug: 以前のバグが再発したり機能の追加/変更に副作用が生じたりすること) を防止できる。
+テストが揃っていれば、コードを安全にリファクタリング (機能を変更せずにコードを改善すること) ができる。
+テストコードは、アプリケーションコードから見ればクライアントとして動作するので、アプリケーションの設計やシステムの他の部分とのインターフェイスを決めるときにも役に立つ。
+上の3つのメリットは、テストを先に書かなくても得ることができますが、それでもテスト駆動開発 (TDD) という手法をいつでも使えるようにしておけば、間違いなく多くの場面で役に立ちます。テストの手法やタイミングは、ある意味テストをどのぐらいすらすら書けるかで決まると言ってよいでしょう。たいていの開発者は、テストを書くのに慣れてくるとテストを先に書くようになります。その他にも、アプリケーションのコードと比べてテストがどのぐらい書きにくいか、必要な機能をどのぐらい正確に把握しているか、その機能が将来廃止される可能性がどのぐらいあるかによっても異なってくるでしょう。
+
+こういうときのために、「テスト駆動」にするか「一括テスト」にするかを決める目安となるガイドラインがあると便利です。著者の経験を元に、次のようにまとめてみました。
+
+アプリケーションのコードよりも明らかにテストコードの方が短くシンプルになる (=簡単に書ける) のであれば、「先に」書く
+動作の仕様がまだ固まりきっていない場合、アプリケーションのコードを先に書き、期待する動作を「後で」書く
+セキュリティが重要な課題またはセキュリティ周りのエラーが発生した場合、テストを「先に」書く
+バグを見つけたら、そのバグを再現するテストを「先に」書き、回帰バグを防ぐ体制を整えてから修正に取りかかる
+すぐにまた変更しそうなコード (HTML構造の細部など) に対するテストは「後で」書く
+リファクタリングするときは「先に」テストを書く。特に、エラーを起こしそうなコードや止まってしまいそうなコードを集中的にテストする
+上のガイドラインに従う場合、現実には最初にコントローラやモデルのテストを書き、続いて統合テスト (モデル/ビュー/コントローラにまたがる機能テスト) を書く、ということになります。また、不安定な要素が特に見当たらないアプリケーションや、(主にビューが) 頻繁に改定される可能性の高いアプリケーションのコードを書くときには、思い切ってテストを省略してしまうこともあります。
+
+本書における主要なテストは、コントローラテスト (この節より)、モデルテスト (第6章より)、統合テスト (第7章より) の3つです。統合テストでは、ユーザーがWebブラウザでアプリケーションとやりとりする操作をシミュレートできるので特に強力です。統合テストはテストにおける最も主要な武器の1つとなりますが、まずは取っ付きやすいコントローラテストから始めることにしましょう。
+
+3.3.1 最初のテスト
+それではサンプルアプリケーションのAboutページの作成に取りかかります。やってみるとわかりますが、このページでは大したことは行わないので、テストは驚くほど短く単純です。早速コラム 3.3のガイドラインに沿って、テストを先に書くことにしましょう。続いてそのテストを実行して「失敗」することを確認し、実際のアプリケーションコードを書きます。
+
+初めて書くテストがいきなり「テスト先行」というのは、Ruby on Railsの知識がある程度以上必要なため、少々敷居が高い面もあります。今の段階でテストを書かせようとすると、尻込みしてしまう人もいるかもしれません。しかしご心配なく。面倒な部分は既にRailsが全部面倒を見てくれています。rails generate controller (リスト 3.6) を実行した時点でテストファイルがちゃんと作成されているので、それを利用しましょう。
+
+$ ls test/controllers/
+static_pages_controller_test.rb
+生成されたテストを見てみましょう (リスト 3.13)。
+
+リスト 3.13: StaticPagesコントローラのデフォルトのテスト green
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+  end
+end
+現時点では、上のリスト 3.13の文法をいきなり理解する必要はありません。今は「このファイルにはテストが2つ書かれている」ことを認識していただければ十分です。その2つのテストは、リスト 3.6で生成したコントローラの2つのアクションであるHomeとHelpに対応して生成されたものです。それぞれのテストでは、アクションをgetして正常に動作することを確認します。この確認は「アサーション」(assertion: 主張、断言) と呼ばれる手法で行います。getは、HomeページやHelpページがいわゆる「GETリクエストを受け付ける」普通のWebページであるということを示します (コラム 3.2)。その次の「response:success」は、実際にはHTTPのステータスコード (ここでは200 OK) を表します。つまり、次のテストは
+
+test "should get home" do
+  get static_pages_home_url
+  assert_response :success
+end
+言葉で表すと「Homeページのテスト。GETリクエストをhomeアクションに対して発行 (=送信) せよ。そうすれば、リクエストに対するレスポンスは[成功]になるはず」となります。
+
+テストを書くサイクルに入る前に、まずは現在のテストスイートをそのまま実行して、問題なくパスすることを確認しておきましょう。テストの実行には次のようにrailsコマンドを使います。
+
+リスト 3.14: green
+$ rails test
+2 tests, 2 assertions, 0 failures, 0 errors, 0 skips
+テストスイートは期待どおり成功 (green) します (成功時に色を表示させるためには、3.6.1で説明するminitest reportersを追加する必要がありますが、見やすくなるだけで必須ではありません)。ところで、テストの実行にはある程度時間がかかります。これには２つの要因が絡んでいます。(1) Springサーバーを起動してRails環境を事前読み込みするのに時間がかかる。ただしこれは最初の1回だけです。(2) Rubyそのものの起動に時間がかかる (2番目の要因については、3.6.2で紹介するGuardを導入することで改善できます)。
+
+3.3.2 Red
+コラム 3.3で解説したように、テスト駆動開発のサイクルは「失敗するテストを最初に書く」「次にアプリケーションのコードを書いて成功させる (パスさせる）」「必要ならリファクタリングする」のように進みます。多くのテストツールでは、テストの失敗を red 、成功したときを green で表します。ここから、このサイクルを「red ・ green ・ REFACTOR」と呼ぶこともあります。これに従って最初のサイクルを完了させましょう。まず失敗するテストを書いて red になるようにします。テストを green にするのは3.3.3、リファクタリングは3.4.3で行います9。
+
+サイクルの記念すべき第一歩はAboutページ用の失敗するテストを書くことです。リスト 3.13を参考にすれば、正しいテストコードを何となく想像できると思います。正しいテストコードをリスト 3.15に示します。
+
+リスト 3.15: Aboutページのテストred
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+  end
+
+  test "should get about" do
+    get static_pages_about_url
+    assert_response :success
+  end
+end
+リスト 3.15のハイライト行を見ると、他のHomeページ用テストやHelpページ用テストとほとんど同じであることがわかります。違いは「home」や「help」の部分が「about」に変わっている点だけです。
+
+テストを実行すると、期待どおり失敗します。
+
+リスト 3.16: red
+$ rails test
+3 tests, 2 assertions, 0 failures, 1 errors, 0 skips
+3.3.3 Green
+テストがめでたく失敗した (red) ので、今度はこのテストのエラーメッセージを頼りにテストがパスする (green) ようにコードを書くことで、Aboutページを実装します。
+
+失敗したテストのエラーメッセージをもっと詳しく見ていきましょう。
+
+リスト 3.17: red
+$ rails test
+NameError: undefined local variable or method `static_pages_about_url'
+このエラーメッセージによれば、「AboutページへのURLが見つからない」とあります。このメッセージをヒントに、ルーティングファイルを修正してみましょう。リスト 3.7のときと同じ要領で、変更を行った結果をリスト 3.18に示します。
+
+リスト 3.18: about用のルートを追加するred
+config/routes.rb
+Rails.application.routes.draw do
+  get  'static_pages/home'
+  get  'static_pages/help'
+  get  'static_pages/about'
+  root 'application#hello'
+end
+リスト 3.18のハイライト行では、/static_pages/aboutというURLに対してGETリクエストが来たら、StaticPagesコントローラのaboutアクションに渡すようRailsに指示しています。この結果、自動的に次のようなヘルパーが使えるようになります。
+
+static_pages_about_url
+修正が終わったらテストスイートをもう一度実行してみましょう。まだ redのままです。しかし今度はメッセージが少し変わりました。
+
+リスト 3.19: red
+$ rails test
+AbstractController::ActionNotFound:
+The action 'about' could not be found for StaticPagesController
+このエラーメッセージから、「StaticPagesコントローラにaboutアクションがない」ということがわかります。リスト 3.8のhomeやhelpと同じようにaboutアクションを追加します (リスト 3.20)。
+
+リスト 3.20: aboutアクションが追加されたStaticPagesコントローラred
+app/controllers/static_pages_controller.rb
+class StaticPagesController < ApplicationController
+
+  def home
+  end
+
+  def help
+  end
+
+  def about
+  end
+end
+今度はどうでしょう。まだ redですが、エラーメッセージがまた少し変わりました。
+
+$ rails test
+ActionController::UnknownFormat: StaticPagesController#about
+is missing a template for this request format and variant.
+今度はテンプレートがないようです。Railsでは、テンプレートとはすなわち「ビュー」を指します。3.2.1で説明したように、homeというアクションはhome.html.erbというビューに関連付けられます。このビューはapp/views/static_pagesディレクトリにあるので、ここにabout.html.erbというファイルを作ればよさそうです。
+
+ファイルの作成方法はシステムの設定によってさまざまですが、たいていのテキストエディタでは、ディレクトリをCtrl+クリックすればコンテキストメニューに [New File] や [ファイルを作成] などのメニューが表示されます。あるいはエディタの[File]メニューでファイルを作成して、このディレクトリに保存しても構いません。個人的にはUnixのtouchコマンドでファイルを作成するのがカッコいいと思います。
+
+$ touch app/views/static_pages/about.html.erb
+Learn Enough Command Line to Be DangerousのListing (英語) に詳細がありますが、touchコマンドは本来、ファイルやディレクトリのタイムスタンプだけを更新するためのコマンドなのですが、ファイルが存在しない場合には空ファイルを作成するという一種の副作用があります (クラウドIDEをご利用の場合はtouchコマンドでファイル作成後、1.3.1のようにファイルツリーを更新する必要があります)。こういったテクニックを少しずつ蓄えていくことが「熟練」への道です (コラム 1.1)。
+
+さて、適切なディレクトリにabout.html.erbファイルを作成したら、リスト 3.21のとおりに内容を書き換えます。
+
+リスト 3.21: Aboutページのコードgreen
+app/views/static_pages/about.html.erb
+<h1>About</h1>
+<p>
+  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+  is a <a href="https://railstutorial.jp/#ebook">book</a> and
+  <a href="https://railstutorial.jp/#screencast">screencast</a>
+  to teach web development with
+  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+  This is the sample application for the tutorial.
+</p>
+今度のrails testの結果は greenになるはずです。
+
+リスト 3.22: green
+$ rails test
+3 tests, 3 assertions, 0 failures, 0 errors, 0 skips
+もちろん、実際にブラウザを起動して、テストが正しく動いているかどうかを確かめることもできます (図 3.5)。
+
+images/figures/about_us_3rd_edition
+図 3.5: 新しいAboutページ (/static_pages/about).
+3.3.4 Refactor
+テストが greenになったので、安心してコードをリファクタリングできるようになりました。アプリケーションの開発が進むと、コードのどこからともなく「腐敗臭」が漂い始めます。コードや記法の統一が崩れて読みづらくなる、クラスやメソッドが何百行にも膨れ上がって読む気を削がれる、なぜこのコードがここにあるのか最早誰もその理由を思い出せなくなる、同じコードがあちこちにコピペされて少しずつ書き換えられ手に負えなくなる、などです。コンピュータにしてみればどんなに汚らしいコードであろうと、そこにあるがままに実行するだけですが、人間はそういうわけにはいきません。こまめにリファクタリングを繰り返してコードを常にすみずみまで美しくコンパクトに保ち、他の開発者や未来の自分の開発意欲を阻喪することのないようにしなければなりません。このサンプルアプリは生まれたてなので、今のところリファクタリングの必要な箇所はほぼどこにも見当たりません。しかし「一匹いれば30匹いると思え」、コードの腐敗臭はどんな小さな隙間からも忍び寄ってきます。こまめなリファクタリングの習慣をできるだけ早いうちに身につけるためにも、少々無理やりに3.4.3から始めることにします。
+
+3.4 少しだけ動的なページ
+静的なページのアクションやビューをいくつか作成できたので、今度はそれをほんの少しだけ動的にしてみましょう。ページの内容に応じて、ページのタイトルを自ら書き換えて表示するようにします。タイトルを自動で変えるぐらいのことが真の動的コンテンツと呼べるかどうかは議論の余地があると思いますが、いずれにしろこのページは、第7章で紹介する本格的な動的コンテンツの基礎となります。
+
+ここでの目標は、Homeページ、Helpページ、Aboutページをそれぞれ編集し、最終的にページごとに異なるタイトルを表示することです。ここではビューの<title>タグの内容を変更します。多くのブラウザでは、titleタグの内容をブラウザウィンドウの上部にウィンドウタイトルとして表示します。titleタグは、いわゆるSEO (Search Engine Optimization: 検索エンジン最適化) においても重要な役割を果たします。今度は「red ・ green ・ REFACTOR」のサイクルをすべて行うことにします。ページタイトルの簡単なテストを書き (red)、3つのページにタイトルを追加し (green)、レイアウトファイルを活用してコードの重複を解決します (REFACTOR)。本節の終わりまでに、3つの静的ページのタイトルを「<ページ名> | Ruby on Rails Tutorial Sample App」という形式に変更します。「<ページ名>」の部分が、表示しているページに応じて動的に変わります (表 3.2)。
+
+前述のrails newコマンド (リスト 3.1) を実行すると、レイアウトもデフォルトで作成されます。ここでは学習のため、一時的に次のようにファイル名を変更します。
+
+$ mv app/views/layouts/application.html.erb layout_file
+普通は、実際のアプリケーション開発時に上のような操作を行うことはありません。ここでは、レイアウトファイルの役割をよりわかりやすく説明するために、最初にレイアウトファイルを無効にしています。
+
+ページ  URL 基本タイトル  追加タイトル
+Home  /static_pages/home  "Ruby on Rails Tutorial Sample App" "Home"
+Help  /static_pages/help  "Ruby on Rails Tutorial Sample App" "Help"
+About /static_pages/about "Ruby on Rails Tutorial Sample App" "About"
+表 3.2: サンプルアプリケーションの (ほぼ) 静的なページ。
+3.4.1 タイトルをテストする (Red)
+ページタイトルを追加する前に、HTMLについて今一度おさらいしておきましょう。典型的なWebページは、リスト 3.23のようなHTMLの構造を持っています (HTMLの詳細は Learn Enough HTML to Be Dangerousを参照)。
+
+リスト 3.23: Webページの典型的なHTML構造
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeting</title>
+  </head>
+  <body>
+    <p>Hello, world!</p>
+  </body>
+</html>
+リスト 3.23の構造には次の３つが含まれています。 1) document type (doctype)は使用するHTMLのバージョン (ここではHTML5) をブラウザに対して宣言します10。 2) headセクション。ここではtitleタグに囲まれた「Greeting」(=あいさつ) という文字があります。 3) bodyセクション。ここには「Hello, world!」という文字列があります。「Hello, world!」は、p (paragraph) タグの中にあります (HTMLではスペースやタブが無視されるので、インデントはあってもなくても大丈夫です。とはいえインデントがあると、HTMLのデータ構造が理解しやすくなります)。
+
+表 3.2の各タイトルについて簡単なテストを書きます (リスト 3.15)。このテストで使っているassert_selectメソッドでは、特定のHTMLタグが存在するかどうかをテストします (この種のアサーションメソッドはその名から「セレクタ」と呼ばれることもあります)11。
+
+assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+上のセレクタは、<title>タグ内に「Home | Ruby on Rails Tutorial Sample App」という文字列があるかどうかをチェックします。同じ要領で3つの静的ページを書き換えます (リスト 3.24)。
+
+リスト 3.24: StaticPagesコントローラのタイトルをテストする red
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+    assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+    assert_select "title", "Help | Ruby on Rails Tutorial Sample App"
+  end
+
+  test "should get about" do
+    get static_pages_about_url
+    assert_response :success
+    assert_select "title", "About | Ruby on Rails Tutorial Sample App"
+  end
+end
+リスト 3.24どおりにテストを作成すると、テストスイートは redになります。
+
+リスト 3.25: red
+$ rails test
+3 tests, 6 assertions, 3 failures, 0 errors, 0 skips
+3.4.2 タイトルを追加する (Green)
+今度は各ページにタイトルを追加して、3.4.1のテストがパスするようにしましょう。リスト 3.23の基本HTML構造をカスタムのHomeページ (リスト 3.11) に追加すると (リスト 3.26のようになります。
+
+リスト 3.26: 完全なHTML構造を備えたHomeページのビューred
+app/views/static_pages/home.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Sample App</h1>
+    <p>
+      This is the home page for the
+      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+      sample application.
+    </p>
+  </body>
+</html>
+このページの表示を図 3.6に示します12。
+
+images/figures/home_view_full_html_4th_ed
+図 3.6: タイトルが付いたHomeページ
+Helpページ (リスト 3.12) やAboutページ (リスト 3.21) についても、同じ要領でリスト 3.27 や リスト 3.28のようなコードに変更します。
+
+リスト 3.27: 完全なHTML構造を備えたHelpページのビュー red
+app/views/static_pages/help.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Help | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Help</h1>
+    <p>  Get help on the Ruby on Rails Tutorial at the
+      <a href="https://railstutorial.jp/help">Rails Tutorial help
+      page</a>.
+      To get help on this sample app, see the
+      <a href="https://railstutorial.jp/#ebook">
+      <em>Ruby on Rails Tutorial</em> book</a>.
+    </p>
+  </body>
+</html>
+リスト 3.28: 完全なHTML構造を備えたAboutページのビューgreen
+app/views/static_pages/about.html.erb
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p>
+      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+      is a <a href="https://railstutorial.jp/#ebook">book</a> and
+      <a href="https://railstutorial.jp/#screencast">screencast</a>
+      to teach web development with
+      <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+      This is the sample application for the tutorial.
+    </p>
+  </body>
+</html>
+これでテストスイートは greenになるはずです。
+
+リスト 3.29: green
+$ rails test
+3 tests, 6 assertions, 0 failures, 0 errors, 0 skips
+演習
+本演習からサンプルアプリケーションを修正する課題を出していきますが、基本的には演習で修正した結果が今後の開発に影響を与えないよう配慮してあります。なぜこんなことを今説明しているのかというと、今後の演習を進めていくうちに、本書のソースコードと読者のソースコードが少しずつ変わっていく可能性があるからです。しかし、そういった差異から生じる問題を解決していくことは、「熟練」に至るまでの学びには欠かせません (コラム 1.1)。ぜひ次の演習にも果敢に取り組んでみてください。
+
+StaticPagesコントローラのテスト (リスト 3.24) には、いくつか繰り返しがあったことにお気づきでしょうか? 特に「Ruby on Rails Tutorial Sample App」という基本タイトルは、各テストで毎回同じ内容を書いてしまっています。そこで、setupという特別なメソッド (各テストが実行される直前で実行されるメソッド) を使って、この問題を解決したいと思います。まずは、リスト 3.30のテストが green になることを確認してみてください (リスト 3.30では、2.2.2で少し触れたインスタンス変数や文字列の式展開というテクニックを使っています。それぞれ4.4.5と4.2.2で詳しく解説するので、今はわからなくても問題ありません)。
+リスト 3.30: 基本タイトルを使ったStaticPagesコントローラのテスト green
+test/controllers/static_pages_controller_test.rb
+require 'test_helper'
+
+class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @base_title = "Ruby on Rails Tutorial Sample App"
+  end
+
+  test "should get home" do
+    get static_pages_home_url
+    assert_response :success
+    assert_select "title", "Home | #{@base_title}"
+  end
+
+  test "should get help" do
+    get static_pages_help_url
+    assert_response :success
+    assert_select "title", "Help | #{@base_title}"
+  end
+
+  test "should get about" do
+    get static_pages_about_url
+    assert_response :success
+    assert_select "title", "About | #{@base_title}"
+  end
+end
+3.4.3 レイアウトと埋め込みRuby (Refactor)
+この節では、Railsのコントローラとアクションを使って3つの有効なページを生成することでさまざまなことを達成しました。しかしそれらは単純な静的ページであり、またRailsの能力を十分に発揮できていません。しかも、コードが甚だしく重複しています。
+
+ページのタイトルがどれもほぼ同じ (完全にではないが)。
+「Ruby on Rails Tutorial Sample App」という文字が3つのタイトルで繰り返し使われている。
+HTMLの構造全体が各ページで重複している。
+同じコードを繰り返すことはRubyの「DRY」(Don’t Repeat Yourself: 繰り返すべからず) という原則に反します。この節では、繰り返しを追放してコードをDRY (=よく乾かす) にしましょう。最後に3.4.2のテストを実行して、タイトルを壊していないことを確認します。
+
+上の話と一見矛盾するようですが、最初にコードを若干追加して、現在は「ほぼ」同じになっているページのタイトルを「完全に」同じにしておきます。この方が、コードの重複を一括で取り除けるからです。
+
+重複を取り除くテクニックの１つとして、ビューで「埋め込みRuby」(Embedded Ruby) が使えます。Home、Help、Aboutページには可変要素があるので、Railsのprovideメソッドを使ってタイトルをページごとに変更します。それでは、home.html.erbビューのコード内のタイトルに含まれている "Home" という文字を置き換えて、動作を確認してみましょう (リスト 3.31)。
+
+リスト 3.31: タイトルにERBを使ったHomeページのビューgreen
+app/views/static_pages/home.html.erb
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Sample App</h1>
+    <p>
+      This is the home page for the
+      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+      sample application.
+    </p>
+  </body>
+</html>
+リスト 3.31は、ERBと呼ばれている、Rubyの埋め込みコードの最初の例です (これで、HTMLビューのファイルの拡張子が.html.erb.)となっている理由をおわかりいただけたと思います)。ERBはWebページに動的な要素を加えるときに使うテンプレートシステムです13。
+
+<% provide(:title, "Home") %>
+上のコードでは「<% ... %>」という記法が使われており、その中からRailsのprovideメソッドを呼び出しています。メソッドの引数では、"Home"という文字列と:titleというラベルを関連付けています14。そしてタイトルの部分では、上の記法と連携する「<%= ... %>」というよく似た記法を使い、その中でRubyのyieldメソッドを呼び出しています15。このメソッドによって、テンプレートのその部分に実際のタイトルが挿入されます。
+
+<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+この2つのERBの違いは次のとおりです。<% ... %>と書くと、中に書かれたコードを単に実行するだけで何も出力しません。<%= ... %>のように等号を追加すると、中のコードの実行結果がテンプレートのその部分に挿入されます。ERBでビューをこのように書き換えても、ページの表示結果は以前とまったく同じです。タイトルの可変部分がERBによって動的に生成されている点だけが異なります。
+
+3.4.2のテストを実行してこの改修を確認すれば、今度も greenになるはずです。
+
+リスト 3.32: green
+$ rails test
+3 tests, 6 assertions, 0 failures, 0 errors, 0 skips
+続いて、HelpページとAboutページも同様に変更します (リスト 3.33、リスト 3.34)。
+
+リスト 3.33: タイトルにERBを使ったHelpページのビューgreen
+app/views/static_pages/help.html.erb
+<% provide(:title, "Help") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>Help</h1>
+    <p>  Get help on the Ruby on Rails Tutorial at the
+      <a href="https://railstutorial.jp/help">Rails Tutorial help
+      section</a>.
+      To get help on this sample app, see the
+      <a href="https://railstutorial.jp/#ebook">
+      <em>Ruby on Rails Tutorial</em> book</a>.
+    </p>
+  </body>
+</html>
+リスト 3.34: タイトルにERBを使ったAboutページのビューgreen
+
+
+
